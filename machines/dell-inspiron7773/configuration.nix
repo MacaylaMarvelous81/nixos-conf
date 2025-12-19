@@ -59,10 +59,16 @@
   };
 
   home-manager.users.jomarm = { ... }: {
-    imports = [ ../../home-manager/common.nix ];
+    imports = [ ../../home-manager/modules ];
 
     home.stateVersion = "24.11";
 
+    usermod.email.enable = true;
+    usermod.gpg.enable = true;
+    usermod.neovim.enable = true;
+    usermod.git.enable = true;
+    usermod.shell.enable = true;
+    usermod.ssh.enable = true;
     usermod.aerc.enable = true;
     usermod.offlineimap.enable = true;
   };
@@ -87,7 +93,16 @@
   #   enableSSHSupport = true;
   # };
 
+  programs.niri.enable = true;
+
   # List services that you want to enable:
+
+  services.offlineimap.enable = true;
+
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
