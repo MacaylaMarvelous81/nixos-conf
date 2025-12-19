@@ -10,8 +10,6 @@
       ./hardware-configuration.nix
       # nixpkgs version pinning
       (import ../../pinning.nix { sources = import ./npins; })
-      # home-manager
-      ../../home-manager.nix
     ];
 
   # Bootloader.
@@ -60,6 +58,17 @@
     packages = with pkgs; [];
   };
 
+  home-manager.users.jomarm = { ... }: {
+    imports = [ ../../home-manager/common.nix ];
+
+    home.stateVersion = "24.11";
+
+    usermod.aerc.enable = true;
+    usermod.offlineimap.enable = true;
+  };
+
+  nix.nixPath = [ "nixos-config=/etc/nixos/machines/dell-inspiron7773/configuration.nix" ];
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -96,5 +105,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.11"; # Did you read the comment?
-
 }
