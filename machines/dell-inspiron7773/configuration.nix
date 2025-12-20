@@ -71,6 +71,7 @@
     usermod.ssh.enable = true;
     usermod.aerc.enable = true;
     usermod.offlineimap.enable = true;
+    usermod.niri.enable = true;
     usermod.noctalia-shell.enable = true;
   };
 
