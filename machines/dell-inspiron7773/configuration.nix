@@ -71,6 +71,7 @@
     usermod.ssh.enable = true;
     usermod.aerc.enable = true;
     usermod.offlineimap.enable = true;
+    usermod.noctalia-shell.enable = true;
   };
 
   nix.nixPath = [ "nixos-config=/etc/nixos/machines/dell-inspiron7773/configuration.nix" ];
