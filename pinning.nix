@@ -1,12 +1,20 @@
-{ sources }: { ... }:
-{
-  imports = [ (import "${sources.home-manager}/nixos") ];
+{ config, lib, ... }:
+let
+  cfg = config.pinning;
+in {
+  options.pinning = {
+    nixpkgs = lib.mkOption {
+      description = "The path to the nixpkgs version to pin at";
+    };
+  };
 
-  # https://piegames.de/dumps/pinning-nixos-with-npins-revisited/
-  nix.channel.enable = false;
-  nix.nixPath = [ "nixpkgs=/etc/nixos/nixpkgs" ];
+  config = {
+    # https://piegames.de/dumps/pinning-nixos-with-npins-revisited/
+    nix.channel.enable = false;
+    nix.nixPath = [ "nixpkgs=/etc/nixos/nixpkgs" ];
 
-  environment.etc = {
-    "nixos/nixpkgs".source = sources.nixos;
+    environment.etc = {
+      "nixos/nixpkgs".source = cfg.nixpkgs;
+    };
   };
 }

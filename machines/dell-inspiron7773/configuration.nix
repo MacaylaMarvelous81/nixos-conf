@@ -2,15 +2,20 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
-{
-  imports =
-    [ # Include the results of the hardware scan.
+let
+  sources = import ./npins;
+in {
+  imports = [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      # nixpkgs version pinning
-      (import ../../pinning.nix { sources = import ./npins; })
+
+      (import "${ sources.home-manager }/nixos")
+
+      ../../pinning.nix
     ];
+
+  pinning.nixpkgs = sources.nixos;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -59,7 +64,16 @@
   };
 
   home-manager.users.jomarm = { ... }: {
-    imports = [ ../../home-manager/modules ];
+    imports = let
+      niri-flake = (import sources.flake-compat) { src = sources.niri-flake; };
+    in [
+      ../../home-manager/modules
+
+      niri-flake.outputs.homeModules.niri
+      niri-flake.outputs.homeModules.stylix
+      "${ sources.noctalia-shell }/nix/home-module.nix"
+      (import sources.stylix).homeModules.stylix
+    ];
 
     home.stateVersion = "24.11";
 
@@ -73,6 +87,8 @@
     usermod.offlineimap.enable = true;
     usermod.niri.enable = true;
     usermod.noctalia-shell.enable = true;
+
+    programs.noctalia-shell.package = pkgs.callPackage "${ sources.noctalia-shell }/nix/package.nix" {};
   };
 
   nix.nixPath = [ "nixos-config=/etc/nixos/machines/dell-inspiron7773/configuration.nix" ];

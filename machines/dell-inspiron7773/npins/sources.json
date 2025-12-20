@@ -1,5 +1,21 @@
 {
   "pins": {
+    "flake-compat": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "NixOS",
+        "repo": "flake-compat"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v1.1.0",
+      "revision": "ff81ac966bb2cae68946d5ed5fc4994f96d0ffec",
+      "url": "https://api.github.com/repos/NixOS/flake-compat/tarball/v1.1.0",
+      "hash": "19d2z6xsvpxm184m41qrpi1bplilwipgnzv9jy17fgw421785q1m"
+    },
     "home-manager": {
       "type": "Git",
       "repository": {
@@ -13,11 +29,53 @@
       "url": "https://github.com/nix-community/home-manager/archive/89c9508bbe9b40d36b3dc206c2483ef176f15173.tar.gz",
       "hash": "0khnj38ysd2lrqz0pjlxcbzxiywm56ynfm6gpis2zh1fzs73j7mc"
     },
+    "niri-flake": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "sodiboo",
+        "repo": "niri-flake"
+      },
+      "branch": "main",
+      "submodules": false,
+      "revision": "bf13a0db31466a2e78b31d82de270d833c8fda4c",
+      "url": "https://github.com/sodiboo/niri-flake/archive/bf13a0db31466a2e78b31d82de270d833c8fda4c.tar.gz",
+      "hash": "131nwm7j0g6shx8p347v8i4mfxj8xb02slwf3861c0ly1pagjf6b"
+    },
     "nixos": {
       "type": "Channel",
       "name": "nixos-unstable",
       "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre912002.1306659b587d/nixexprs.tar.xz",
       "hash": "00igvm0x3anh57f159964snq6gf67v3v11pjwpji7ml1bdpwh76q"
+    },
+    "noctalia-shell": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "noctalia-dev",
+        "repo": "noctalia-shell"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": "v",
+      "submodules": false,
+      "version": "v3.7.1",
+      "revision": "541d6b7e5133cba670e80bb48b71a637bfa141ec",
+      "url": "https://api.github.com/repos/noctalia-dev/noctalia-shell/tarball/v3.7.1",
+      "hash": "077acr7ac09ybx4kx7bnxwj9q2hj0sa2nr99gm1671wv7fbacn4y"
+    },
+    "stylix": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nix-community",
+        "repo": "stylix"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "e6829552d4bb659ebab00f08c61d8c62754763f3",
+      "url": "https://github.com/nix-community/stylix/archive/e6829552d4bb659ebab00f08c61d8c62754763f3.tar.gz",
+      "hash": "064v95jl9p6kvw5w6n259v795sb34wl0fpdqrrx2zrq2473d211n"
     }
   },
   "version": 5
