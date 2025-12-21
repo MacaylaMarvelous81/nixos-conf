@@ -64,15 +64,10 @@ in {
   };
 
   home-manager.users.jomarm = { ... }: {
-    imports = let
-      niri-flake = (import sources.flake-compat) { src = sources.niri-flake; };
-    in [
+    imports = [
       ../../home-manager/modules
 
-      niri-flake.outputs.homeModules.niri
-      niri-flake.outputs.homeModules.stylix
-      "${ sources.noctalia-shell }/nix/home-module.nix"
-      (import sources.stylix).homeModules.stylix
+      (import ../../home-manager/inputs.nix { inherit sources; })
     ];
 
     home.stateVersion = "24.11";
@@ -87,8 +82,21 @@ in {
     usermod.offlineimap.enable = true;
     usermod.niri.enable = true;
     usermod.noctalia-shell.enable = true;
+    usermod.firefox.enable = true;
+    usermod.secrets.enable = true;
 
     programs.noctalia-shell.package = pkgs.callPackage "${ sources.noctalia-shell }/nix/package.nix" {};
+
+    xdg.mimeApps = {
+      enable = true;
+
+      defaultApplications = {
+        "text/html" = "firefox.desktop";
+        "x-scheme-handler/http" = "firefox.dekstop";
+        "x-scheme-handler/https" = "firefox.desktop";
+        "application/x-extension-html" = "firefox.desktop";
+      };
+    };
   };
 
   nix.nixPath = [ "nixos-config=/etc/nixos/machines/dell-inspiron7773/configuration.nix" ];
@@ -112,6 +120,15 @@ in {
   # };
 
   programs.niri.enable = true;
+  programs.steam = {
+    enable = true;
+    package = pkgs.steam.override {
+      extraArgs = "-system-composer";
+    };
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
+  };
 
   # List services that you want to enable:
 

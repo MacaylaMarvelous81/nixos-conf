@@ -64,6 +64,19 @@
       "url": "https://api.github.com/repos/noctalia-dev/noctalia-shell/tarball/v3.7.1",
       "hash": "077acr7ac09ybx4kx7bnxwj9q2hj0sa2nr99gm1671wv7fbacn4y"
     },
+    "sops-nix": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "Mic92",
+        "repo": "sops-nix"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "9836912e37aef546029e48c8749834735a6b9dad",
+      "url": "https://github.com/Mic92/sops-nix/archive/9836912e37aef546029e48c8749834735a6b9dad.tar.gz",
+      "hash": "1sk77hv4x1dg7b1c7vpi5npa7smgz726l0rzywlzw80hwk085qh4"
+    },
     "stylix": {
       "type": "Git",
       "repository": {
