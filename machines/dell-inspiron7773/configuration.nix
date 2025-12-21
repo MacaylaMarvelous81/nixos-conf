@@ -82,6 +82,7 @@ in {
     usermod.offlineimap.enable = true;
     usermod.niri.enable = true;
     usermod.noctalia-shell.enable = true;
+    usermod.stylix.enable = true;
     usermod.firefox.enable = true;
     usermod.secrets.enable = true;
 
