@@ -55,6 +55,17 @@ in {
     variant = "";
   };
 
+  hardware.graphics.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.nvidia.modesetting.enable = true;
+  hardware.nvidia.open = false;
+  hardware.nvidia.prime = {
+    sync.enable = true;
+
+    intelBusId = "PCI:0:2:0";
+    nvidiaBusId = "PCI:1:0:0";
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jomarm = {
     isNormalUser = true;
@@ -72,6 +83,10 @@ in {
 
     home.stateVersion = "24.11";
 
+    home.packages = with pkgs; [
+      limo
+    ];
+
     usermod.email.enable = true;
     usermod.gpg.enable = true;
     usermod.neovim.enable = true;
@@ -87,6 +102,11 @@ in {
     usermod.secrets.enable = true;
 
     programs.noctalia-shell.package = pkgs.callPackage "${ sources.noctalia-shell }/nix/package.nix" {};
+    programs.niri.settings = {
+      debug = {
+        render-drm-device = "/dev/dri/card1";
+      };
+    };
 
     xdg.mimeApps = {
       enable = true;
