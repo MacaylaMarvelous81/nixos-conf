@@ -100,6 +100,7 @@ in {
     usermod.stylix.enable = true;
     usermod.firefox.enable = true;
     usermod.secrets.enable = true;
+    usermod.term.enable = true;
 
     programs.noctalia-shell.package = pkgs.callPackage "${ sources.noctalia-shell }/nix/package.nix" {};
     programs.niri.settings = {
