@@ -55,6 +55,10 @@ in {
     variant = "";
   };
 
+  swapDevices = [ {
+    device = "/dev/sda2";
+  } ];
+
   hardware.graphics.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.nvidia.modesetting.enable = true;
