@@ -105,6 +105,8 @@ in {
     usermod.firefox.enable = true;
     usermod.secrets.enable = true;
     usermod.term.enable = true;
+    # usermod.yazi.enable = true;
+    usermod.portty.enable = true;
 
     programs.noctalia-shell.package = pkgs.callPackage "${ sources.noctalia-shell }/nix/package.nix" {};
     programs.niri.settings = {
@@ -112,6 +114,8 @@ in {
         render-drm-device = "/dev/dri/card1";
       };
     };
+
+    xdg.portal.enable = true;
 
     xdg.mimeApps = {
       enable = true;
