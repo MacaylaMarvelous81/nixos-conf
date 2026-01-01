@@ -70,6 +70,13 @@ in {
     nvidiaBusId = "PCI:1:0:0";
   };
 
+  security.pam.services = {
+    login.u2fAuth = true;
+    sudo.u2fAuth = true;
+  };
+  services.pcscd.enable = true;
+  services.udev.packages = [ pkgs.yubikey-personalization ];
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.jomarm = {
     isNormalUser = true;
@@ -88,8 +95,14 @@ in {
     home.stateVersion = "24.11";
 
     home.packages = with pkgs; [
-      limo
+      (limo.override { withUnrar = true; })
+      dragon-drop
+      yubikey-manager
     ];
+
+    home.shellAliases = {
+      img = "${ pkgs.chafa }/bin/chafa";
+    };
 
     usermod.email.enable = true;
     usermod.gpg.enable = true;
