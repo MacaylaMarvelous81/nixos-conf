@@ -95,7 +95,25 @@ in {
     home.stateVersion = "24.11";
 
     home.packages = with pkgs; [
-      (limo.override { withUnrar = true; })
+      (limo.override {
+        withUnrar = true;
+        # nixpkgs: 0b9ba739bcd2048da57b88899a390c372c500608 (libloot: fix build)
+        libloot = pkgs.libloot.overrideAttrs (prevAttrs: {
+          passthru = (prevAttrs.passthru or {}) // {
+            yaml-cpp-src = pkgs.fetchFromGitHub {
+              owner = "loot";
+              repo = "yaml-cpp";
+              tag = "0.8.0+merge-key-support.2";
+
+              postFetch = ''
+                sed -e 'li #include <cstdint>' -i "$out/src/emitterurils.cpp"
+              '';
+
+              hash = "sha256-5xbqOI4L3XCqx+4k6IcZUwOdHAfbBy7nZgRKGkRJabQ=";
+            };
+          };
+        });
+      })
       dragon-drop
       yubikey-manager
     ];
