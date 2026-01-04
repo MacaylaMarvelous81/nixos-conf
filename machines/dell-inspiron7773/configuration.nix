@@ -9,11 +9,21 @@ let
 in {
   imports = [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./modules
 
       (import "${ sources.home-manager }/nixos")
 
       ../../pinning.nix
+      ../../modules
     ];
+
+  osusermod.steam.enable = true;
+  machine.graphics.enable = true;
+  machine.graphical-session.enable = true;
+  machine.user = {
+    enable = true;
+    inherit sources;
+  };
 
   pinning.nixpkgs = sources.nixos;
 
@@ -59,99 +69,6 @@ in {
     device = "/dev/sda2";
   } ];
 
-  hardware.graphics.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.nvidia.modesetting.enable = true;
-  hardware.nvidia.open = false;
-  hardware.nvidia.prime = {
-    sync.enable = true;
-
-    intelBusId = "PCI:0:2:0";
-    nvidiaBusId = "PCI:1:0:0";
-  };
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.jomarm = {
-    isNormalUser = true;
-    description = "Jomar Milan";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-  };
-
-  home-manager.users.jomarm = { ... }: {
-    imports = [
-      ../../home-manager/modules
-
-      (import ../../home-manager/inputs.nix { inherit sources; })
-    ];
-
-    home.stateVersion = "24.11";
-
-    home.packages = with pkgs; [
-      (limo.override {
-        withUnrar = true;
-        # nixpkgs: 0b9ba739bcd2048da57b88899a390c372c500608 (libloot: fix build)
-        libloot = pkgs.libloot.overrideAttrs (prevAttrs: {
-          passthru = (prevAttrs.passthru or {}) // {
-            yaml-cpp-src = pkgs.fetchFromGitHub {
-              owner = "loot";
-              repo = "yaml-cpp";
-              tag = "0.8.0+merge-key-support.2";
-
-              postFetch = ''
-                sed -e 'li #include <cstdint>' -i "$out/src/emitterurils.cpp"
-              '';
-
-              hash = "sha256-5xbqOI4L3XCqx+4k6IcZUwOdHAfbBy7nZgRKGkRJabQ=";
-            };
-          };
-        });
-      })
-      dragon-drop
-    ];
-
-    home.shellAliases = {
-      img = "${ pkgs.chafa }/bin/chafa";
-    };
-
-    usermod.email.enable = true;
-    usermod.gpg.enable = true;
-    usermod.neovim.enable = true;
-    usermod.git.enable = true;
-    usermod.shell.enable = true;
-    usermod.ssh.enable = true;
-    usermod.aerc.enable = true;
-    usermod.offlineimap.enable = true;
-    usermod.niri.enable = true;
-    usermod.noctalia-shell.enable = true;
-    usermod.stylix.enable = true;
-    usermod.firefox.enable = true;
-    usermod.secrets.enable = true;
-    usermod.term.enable = true;
-    # usermod.yazi.enable = true;
-    usermod.portty.enable = true;
-
-    programs.noctalia-shell.package = pkgs.callPackage "${ sources.noctalia-shell }/nix/package.nix" {};
-    programs.niri.settings = {
-      debug = {
-        render-drm-device = "/dev/dri/card1";
-      };
-    };
-
-    xdg.portal.enable = true;
-
-    xdg.mimeApps = {
-      enable = true;
-
-      defaultApplications = {
-        "text/html" = "firefox.desktop";
-        "x-scheme-handler/http" = "firefox.dekstop";
-        "x-scheme-handler/https" = "firefox.desktop";
-        "application/x-extension-html" = "firefox.desktop";
-      };
-    };
-  };
-
   nix.nixPath = [ "nixos-config=/etc/nixos/machines/dell-inspiron7773/configuration.nix" ];
 
   # Allow unfree packages
@@ -172,32 +89,16 @@ in {
   #   enableSSHSupport = true;
   # };
 
-  programs.niri.enable = true;
-  programs.steam = {
-    enable = true;
-    package = pkgs.steam.override {
-      extraArgs = "-system-composer";
-    };
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-    localNetworkGameTransfers.openFirewall = true;
-  };
-
   # List services that you want to enable:
 
   services.offlineimap.enable = true;
-
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-  };
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 38281 ];
+  networking.firewall.allowedUDPPorts = [ 19132 ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
