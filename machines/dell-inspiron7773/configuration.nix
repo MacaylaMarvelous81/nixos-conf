@@ -92,6 +92,7 @@ in {
   # List services that you want to enable:
 
   services.offlineimap.enable = true;
+  services.udisks2.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
