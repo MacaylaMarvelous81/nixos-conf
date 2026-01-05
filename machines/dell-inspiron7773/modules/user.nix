@@ -70,6 +70,7 @@ in {
       usermod.secrets.enable = true;
       usermod.term.enable = true;
       usermod.portty.enable = true;
+      usermod.hydrus.enable = true;
 
       programs.noctalia-shell.package = pkgs.callPackage "${ cfg.sources.noctalia-shell }/nix/package.nix" {};
       programs.niri.settings = {
