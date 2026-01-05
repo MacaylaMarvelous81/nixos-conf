@@ -18,6 +18,7 @@ in {
     ];
 
   osusermod.steam.enable = true;
+  machine.backup.enable = true;
   machine.graphics.enable = true;
   machine.graphical-session.enable = true;
   machine.user = {
