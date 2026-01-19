@@ -26,6 +26,19 @@
       "url": "https://github.com/nix-community/home-manager/archive/83bcb17377f0242376a327e742e9404e9a528647.tar.gz",
       "hash": "sha256-GdwFfnwdUgABFpc4sAmX7GYx8eQs6cEjOPo6nBJ0YaI="
     },
+    "macaylamarvelous81-pkgs": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "MacaylaMarvelous81",
+        "repo": "nix-exprs"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "58cb99171f8f03606ffb24f835068863493731d0",
+      "url": "https://github.com/MacaylaMarvelous81/nix-exprs/archive/58cb99171f8f03606ffb24f835068863493731d0.tar.gz",
+      "hash": "sha256-VzWK5vebiBh1haf0RQSUAP+5mAYUgoM03pUv6RLgEgE="
+    },
     "niri-flake": {
       "type": "Git",
       "repository": {
