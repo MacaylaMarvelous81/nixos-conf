@@ -21,6 +21,7 @@ in {
   machine.backup.enable = true;
   machine.graphics.enable = true;
   machine.graphical-session.enable = true;
+  machine.docker.enable = true;
   machine.user = {
     enable = true;
     inherit sources;

@@ -15,11 +15,11 @@ in {
     users.users.jomarm = {
       isNormalUser = true;
       description = "Jomar Milan";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "docker" ];
       packages = with pkgs; [];
     };
 
-    home-manager.users.jomarm = { config, ... }: {
+    home-manager.users.jomarm = { config, pkgs, wrappers, ... }: {
       imports = [
         ../../../home-manager/modules
 
@@ -27,6 +27,12 @@ in {
       ];
 
       home.stateVersion = "24.11";
+
+      usermod.unfree.pkgnames = [
+        "aseprite"
+        "idea"
+        "rider"
+      ];
 
       home.packages = with pkgs; [
         (limo.override { withUnrar = true; })
@@ -83,6 +89,8 @@ in {
           '';
           runScript = "\"${ config.home.homeDirectory }\"/GOG\\ Games/Stellaris/start.sh";
         })
+        jetbrains.idea
+        wrappers.rider
       ];
 
       home.shellAliases = {
