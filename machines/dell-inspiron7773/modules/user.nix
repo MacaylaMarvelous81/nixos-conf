@@ -114,6 +114,7 @@ in {
       usermod.portty.enable = true;
       usermod.hydrus.enable = true;
       usermod.atool.enable = true;
+      usermod.wallpaper.enable = true;
 
       programs.noctalia-shell.package = pkgs.callPackage "${ cfg.sources.noctalia-shell }/nix/package.nix" {};
       programs.niri.settings = {
