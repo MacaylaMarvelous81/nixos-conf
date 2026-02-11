@@ -99,7 +99,6 @@ in {
 
       usermod.email.enable = true;
       usermod.gpg.enable = true;
-      usermod.neovim.enable = true;
       usermod.git.enable = true;
       usermod.shell.enable = true;
       usermod.ssh.enable = true;
@@ -115,6 +114,7 @@ in {
       usermod.hydrus.enable = true;
       usermod.atool.enable = true;
       usermod.wallpaper.enable = true;
+      usermod.zed-editor.enable = true;
 
       programs.noctalia-shell.package = pkgs.callPackage "${ cfg.sources.noctalia-shell }/nix/package.nix" {};
       programs.niri.settings = {
