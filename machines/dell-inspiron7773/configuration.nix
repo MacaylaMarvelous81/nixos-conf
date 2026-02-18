@@ -6,16 +6,18 @@
 
 let
   sources = import ./npins;
-in {
-  imports = [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./modules
+in
+{
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./modules
 
-      (import "${ sources.home-manager }/nixos")
+    (import "${sources.home-manager}/nixos")
 
-      ../../pinning.nix
-      ../../modules
-    ];
+    ../../pinning.nix
+    ../../modules
+  ];
 
   osusermod.steam.enable = true;
   machine.backup.enable = true;
@@ -28,6 +30,7 @@ in {
   };
 
   pinning.nixpkgs = sources.nixos;
+  pinning.npinsDirectory = "/etc/nixos/machines/dell-inspiron7773/npins";
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -67,9 +70,11 @@ in {
     variant = "";
   };
 
-  swapDevices = [ {
-    device = "/dev/sda2";
-  } ];
+  swapDevices = [
+    {
+      device = "/dev/sda2";
+    }
+  ];
 
   nix.nixPath = [ "nixos-config=/etc/nixos/machines/dell-inspiron7773/configuration.nix" ];
 
@@ -79,8 +84,8 @@ in {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
