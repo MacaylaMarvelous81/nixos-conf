@@ -135,6 +135,7 @@ in
         usermod.atool.enable = true;
         usermod.wallpaper.enable = true;
         usermod.zed-editor.enable = true;
+        usermod.vintagestory.enable = true;
 
         programs.noctalia-shell.package =
           pkgs.callPackage "${cfg.sources.noctalia-shell}/nix/package.nix"
