@@ -1,5 +1,18 @@
 {
   "pins": {
+    "erosanix": {
+      "type": "Git",
+      "repository": {
+        "type": "GitHub",
+        "owner": "emmanuelrosa",
+        "repo": "erosanix"
+      },
+      "branch": "master",
+      "submodules": false,
+      "revision": "ed5217725bf19acfb594be8a4a653e3f576a3397",
+      "url": "https://github.com/emmanuelrosa/erosanix/archive/ed5217725bf19acfb594be8a4a653e3f576a3397.tar.gz",
+      "hash": "sha256-FiVKf4ZSHCcHOKkQAaIcjQGWiTnlepv5462Djk10BeY="
+    },
     "flake-compat": {
       "type": "Git",
       "repository": {
@@ -35,9 +48,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "58cb99171f8f03606ffb24f835068863493731d0",
-      "url": "https://github.com/MacaylaMarvelous81/nix-exprs/archive/58cb99171f8f03606ffb24f835068863493731d0.tar.gz",
-      "hash": "sha256-VzWK5vebiBh1haf0RQSUAP+5mAYUgoM03pUv6RLgEgE="
+      "revision": "6a2d1e1d42dbb14c8daf7e5c1164bcf6931b474d",
+      "url": "https://github.com/MacaylaMarvelous81/nix-exprs/archive/6a2d1e1d42dbb14c8daf7e5c1164bcf6931b474d.tar.gz",
+      "hash": "sha256-4PPEzzPcxyFkefdWpmXgDTKAzu0moyiBbBOV7/VlgvM="
     },
     "niri-flake": {
       "type": "Git",

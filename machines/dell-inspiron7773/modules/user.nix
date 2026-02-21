@@ -33,6 +33,8 @@ in
       {
         config,
         pkgs,
+        erosanix,
+        macaylamarvelous81-pkgs,
         wrappers,
         ...
       }:
@@ -58,6 +60,8 @@ in
           jetbrains.idea
           wrappers.rider
           kdePackages.okular
+          erosanix.defaultNix.packages."${builtins.currentSystem}".mkwindowsapp-tools
+          macaylamarvelous81-pkgs.sseedit
           (buildFHSEnv {
             # bit of a mess of an adhoc wrapper...
             name = "stellaris-gog-unpacked-env";
