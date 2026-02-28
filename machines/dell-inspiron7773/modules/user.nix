@@ -140,6 +140,7 @@ in
         usermod.wallpaper.enable = true;
         usermod.zed-editor.enable = true;
         usermod.vintagestory.enable = true;
+        usermod.calibre.enable = true;
 
         programs.noctalia-shell.package =
           pkgs.callPackage "${cfg.sources.noctalia-shell}/nix/package.nix"
