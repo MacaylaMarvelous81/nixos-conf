@@ -71,22 +71,6 @@
       "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre958232.80bdc1e5ce51/nixexprs.tar.xz",
       "hash": "sha256-kx4m0PT8acdAYUXesEkNtGJaZbarQn/C//NNbV4weX8="
     },
-    "noctalia-shell": {
-      "type": "GitRelease",
-      "repository": {
-        "type": "GitHub",
-        "owner": "noctalia-dev",
-        "repo": "noctalia-shell"
-      },
-      "pre_releases": false,
-      "version_upper_bound": null,
-      "release_prefix": "v",
-      "submodules": false,
-      "version": "v4.6.4",
-      "revision": "b455dbb11fb0fbb58d3b334cffe5c2e037b5ae27",
-      "url": "https://api.github.com/repos/noctalia-dev/noctalia-shell/tarball/refs/tags/v4.6.4",
-      "hash": "sha256-D4h84+SPOthTClO5fzv37MP176Egh85cKAJbT2lWl5c="
-    },
     "sops-nix": {
       "type": "Git",
       "repository": {

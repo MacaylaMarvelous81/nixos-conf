@@ -130,7 +130,6 @@ in
         usermod.aerc.enable = true;
         usermod.offlineimap.enable = true;
         usermod.niri.enable = true;
-        usermod.noctalia-shell.enable = true;
         usermod.stylix.enable = true;
         usermod.firefox.enable = true;
         usermod.secrets.enable = true;
@@ -143,14 +142,14 @@ in
         usermod.vintagestory.enable = true;
         usermod.calibre.enable = true;
 
-        programs.noctalia-shell.package =
-          pkgs.callPackage "${cfg.sources.noctalia-shell}/nix/package.nix"
-            { };
         programs.niri.settings = {
           debug = {
             render-drm-device = "/dev/dri/card1";
           };
         };
+        programs.rofi.enable = true;
+
+        services.mako.enable = true;
 
         # xdg.portal.enable = true;
 
