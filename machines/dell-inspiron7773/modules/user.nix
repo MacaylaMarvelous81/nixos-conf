@@ -60,6 +60,7 @@ in
           jetbrains.idea
           wrappers.rider
           kdePackages.okular
+          krita
           erosanix.defaultNix.packages."${builtins.currentSystem}".mkwindowsapp-tools
           macaylamarvelous81-pkgs.sseedit
           (buildFHSEnv {
