@@ -141,13 +141,13 @@ in
         usermod.zed-editor.enable = true;
         usermod.vintagestory.enable = true;
         usermod.calibre.enable = true;
+        usermod.rofi.enable = true;
 
         programs.niri.settings = {
           debug = {
             render-drm-device = "/dev/dri/card1";
           };
         };
-        programs.rofi.enable = true;
 
         services.mako.enable = true;
 
