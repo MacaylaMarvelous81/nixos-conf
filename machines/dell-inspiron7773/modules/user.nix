@@ -58,7 +58,7 @@ in
           dragon-drop
           aseprite
           jetbrains.idea
-          wrappers.rider
+          jetbrains.rider
           kdePackages.okular
           krita
           erosanix.defaultNix.packages."${builtins.currentSystem}".mkwindowsapp-tools
