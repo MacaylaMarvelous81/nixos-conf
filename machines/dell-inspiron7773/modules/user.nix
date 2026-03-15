@@ -27,6 +27,9 @@ in
         "docker"
       ];
       packages = with pkgs; [ ];
+      openssh.authorizedKeys.keys = [
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHOfZ3GVOc4/hDqYzxlfg41y5MgtVD9WQxmN90QtHt4I jomarm@Jomars-MacBook-Pro.local"
+      ];
     };
 
     home-manager.users.jomarm =
