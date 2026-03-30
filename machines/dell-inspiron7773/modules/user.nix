@@ -152,6 +152,7 @@ in
         usermod.zed-editor.enable = true;
         usermod.vintagestory.enable = true;
         usermod.rofi.enable = true;
+        usermod.waybar.enable = true;
 
         programs.calibre.enable = true;
         programs.prismlauncher.enable = true;
