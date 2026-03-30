@@ -103,6 +103,8 @@ in
   services.udisks2.enable = true;
   services.blueman.enable = true;
 
+  hardware.bluetooth.enable = true;
+
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
