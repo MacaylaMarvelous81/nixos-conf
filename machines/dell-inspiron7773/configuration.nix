@@ -101,13 +101,20 @@ in
 
   services.offlineimap.enable = true;
   services.udisks2.enable = true;
+  services.blueman.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 38281 ];
-  networking.firewall.allowedUDPPorts = [ 19132 ];
+  networking.firewall.allowedTCPPorts = [
+    38281
+    25565
+  ];
+  networking.firewall.allowedUDPPorts = [
+    19132
+    25565
+  ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
