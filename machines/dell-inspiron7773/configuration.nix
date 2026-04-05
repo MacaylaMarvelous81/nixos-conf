@@ -116,6 +116,7 @@ in
   networking.firewall.allowedUDPPorts = [
     19132
     25565
+    27722
   ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
