@@ -156,15 +156,16 @@ in
 
         programs.calibre.enable = true;
         programs.prismlauncher.enable = true;
+        programs.obs-studio.enable = true;
         programs.niri.settings = {
           debug = {
             render-drm-device = "/dev/dri/card1";
           };
         };
 
-        services.mako.enable = true;
+        services.dunst.enable = true;
 
-        # xdg.portal.enable = true;
+        xdg.portal.enable = true;
 
         xdg.mimeApps = {
           enable = true;
