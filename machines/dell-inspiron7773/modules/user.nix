@@ -125,14 +125,6 @@ in
           img = "${pkgs.chafa}/bin/chafa";
         };
 
-        home.pointerCursor = {
-          gtk.enable = true;
-          x11.enable = true;
-          package = pkgs.vanilla-dmz;
-          name = "Vanilla-DMZ";
-          size = 24;
-        };
-
         usermod.email.enable = true;
         usermod.gpg.enable = true;
         usermod.git.enable = true;
@@ -141,11 +133,11 @@ in
         usermod.aerc.enable = true;
         usermod.offlineimap.enable = true;
         usermod.niri.enable = true;
-        usermod.stylix.enable = false;
+        usermod.stylix.enable = true;
         usermod.firefox.enable = true;
         usermod.secrets.enable = true;
         usermod.term.enable = true;
-        usermod.thunar.enable = true;
+        usermod.explorer.enable = true;
         usermod.hydrus.enable = true;
         usermod.atool.enable = true;
         usermod.wallpaper.enable = true;
