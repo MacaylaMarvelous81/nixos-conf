@@ -9,9 +9,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "960278f146ec88ceb1a8f89d904a2681807d45b1",
-      "url": "https://github.com/emmanuelrosa/erosanix/archive/960278f146ec88ceb1a8f89d904a2681807d45b1.tar.gz",
-      "hash": "sha256-VHFLWBgAgJ/80+yfLzYNJQ7J2FaGUE4UYISB7odRDjA="
+      "revision": "c34899df5fb4e1744b780e4cae3b0999d780210d",
+      "url": "https://github.com/emmanuelrosa/erosanix/archive/c34899df5fb4e1744b780e4cae3b0999d780210d.tar.gz",
+      "hash": "sha256-bI6FIgj/v2dUoJyf8EVrpXg+fVoWP/HDxz8d19TXH2w="
     },
     "flake-compat": {
       "type": "Git",
@@ -35,9 +35,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "d166a078541982a76f14d3e06e9665fa5c9ed85e",
-      "url": "https://github.com/nix-community/home-manager/archive/d166a078541982a76f14d3e06e9665fa5c9ed85e.tar.gz",
-      "hash": "sha256-S0RqAyDPMTcv9vASMaE8eY1QexFysAOdnxUxFHIPOyE="
+      "revision": "f6196e5b4d3f0168d09feab9ba678fa18ca58cbb",
+      "url": "https://github.com/nix-community/home-manager/archive/f6196e5b4d3f0168d09feab9ba678fa18ca58cbb.tar.gz",
+      "hash": "sha256-PUb9TTfqsA1g+aHJt5s8tIP7QdX8xHeOtDMPVRuylfM="
     },
     "macaylamarvelous81-pkgs": {
       "type": "Git",
@@ -61,15 +61,15 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "cfa91d98691d91cc604ab8f4e224819524c496ad",
-      "url": "https://github.com/sodiboo/niri-flake/archive/cfa91d98691d91cc604ab8f4e224819524c496ad.tar.gz",
-      "hash": "sha256-zcX3hf2cTOQ06kRP+FCYbuaWhy+FLruLFp+D79Enjo4="
+      "revision": "f943da038fd668d435c2d17916577f295faa8839",
+      "url": "https://github.com/sodiboo/niri-flake/archive/f943da038fd668d435c2d17916577f295faa8839.tar.gz",
+      "hash": "sha256-nAqtUMy22olwyiOJB0CASVrbu5XB5+43GjlbIJ1KuvQ="
     },
     "nixos": {
       "type": "Channel",
       "name": "nixos-unstable",
-      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre972949.6201e203d095/nixexprs.tar.xz",
-      "hash": "sha256-ByAX1LkhCwZ94+KnFAmnJSMAvui7kgCxjHgUHsWAbfI="
+      "url": "https://releases.nixos.org/nixos/unstable/nixos-26.05pre977467.4c1018dae018/nixexprs.tar.xz",
+      "hash": "sha256-WGjBfvXv/mcg5yBg+AtK1Q3FHyXfjAAeJROmg7DLYfM="
     },
     "sops-nix": {
       "type": "Git",
@@ -80,9 +80,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "19bf3d8678fbbfbc173beaa0b5b37d37938db301",
-      "url": "https://github.com/Mic92/sops-nix/archive/19bf3d8678fbbfbc173beaa0b5b37d37938db301.tar.gz",
-      "hash": "sha256-B+rZDPyktGEjOMt8PcHKYmgmKoF+GaNAFJhguktXAo0="
+      "revision": "31ac5fe5d015f76b54058c69fcaebb66a55871a4",
+      "url": "https://github.com/Mic92/sops-nix/archive/31ac5fe5d015f76b54058c69fcaebb66a55871a4.tar.gz",
+      "hash": "sha256-VKp9bhVSm0bT6JWctFy06ocqxGGnWHi1NfoE90IgIcY="
     },
     "stylix": {
       "type": "Git",
@@ -93,9 +93,9 @@
       },
       "branch": "master",
       "submodules": false,
-      "revision": "9b4a5eb409ceac2dd6ad495c7988e189a418cd30",
-      "url": "https://github.com/nix-community/stylix/archive/9b4a5eb409ceac2dd6ad495c7988e189a418cd30.tar.gz",
-      "hash": "sha256-k/H2/oyex6GEC6uYXYetrboFQeTmX1Ouwv/zaW7b/Z0="
+      "revision": "d3e447786b74d62c75f665e17cb3e681c66e90c7",
+      "url": "https://github.com/nix-community/stylix/archive/d3e447786b74d62c75f665e17cb3e681c66e90c7.tar.gz",
+      "hash": "sha256-KJO/7qoxJ+hlsb3WlFSl6IGrExBIf1GvKdrhOlnGdKY="
     },
     "wrappers": {
       "type": "Git",
@@ -106,9 +106,9 @@
       },
       "branch": "main",
       "submodules": false,
-      "revision": "bab35ffae25cf6f4e4fdb3c2f7f0ac80966ce737",
-      "url": "https://github.com/BirdeeHub/nix-wrapper-modules/archive/bab35ffae25cf6f4e4fdb3c2f7f0ac80966ce737.tar.gz",
-      "hash": "sha256-a6JZDuBIwQmuEwYM4dziH+WyrpE8HCP8F7JFIn3CNvw="
+      "revision": "fb62851ffc5f6a4d53ebc00b93743e29b41e6224",
+      "url": "https://github.com/BirdeeHub/nix-wrapper-modules/archive/fb62851ffc5f6a4d53ebc00b93743e29b41e6224.tar.gz",
+      "hash": "sha256-8Jxnn2uoFhm2H579ycVxFWDtrywJ6Mc8RmqWbZwk5So="
     }
   },
   "version": 7
