@@ -1,0 +1,110 @@
+{
+    "erosanix": {
+        "branch": "master",
+        "description": "My main NixOS/Nix Flakes repository",
+        "homepage": null,
+        "owner": "emmanuelrosa",
+        "repo": "erosanix",
+        "rev": "3fc07ae67fc4fbc0f3630b24273c31c5c66ccb40",
+        "sha256": "17xjf60v8xqgzwm21crbk0ziwm35ycwss4p42mmc5zcymbpdplcr",
+        "type": "tarball",
+        "url": "https://github.com/emmanuelrosa/erosanix/archive/3fc07ae67fc4fbc0f3630b24273c31c5c66ccb40.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "flake-compat": {
+        "branch": "master",
+        "description": null,
+        "homepage": null,
+        "owner": "NixOS",
+        "repo": "flake-compat",
+        "rev": "5edf11c44bc78a0d334f6334cdaf7d60d732daab",
+        "sha256": "0yqfa6rx8md81bcn4szfp0hjq2f3h9i8zjzhqqyfqdkrj5559nmw",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/flake-compat/archive/5edf11c44bc78a0d334f6334cdaf7d60d732daab.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "home-manager": {
+        "branch": "master",
+        "description": "Manage a user environment using Nix  [maintainer=@khaneliman, @rycee] ",
+        "homepage": "https://nix-community.github.io/home-manager/",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "667b3c47325441e6a444faaf405bba76ec70338a",
+        "sha256": "1fi6jppg0i9d2rkfa3a41ls0kizi562dwvpsgbl72xzqpy7h45dh",
+        "type": "tarball",
+        "url": "https://github.com/nix-community/home-manager/archive/667b3c47325441e6a444faaf405bba76ec70338a.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "macaylamarvelous81-pkgs": {
+        "branch": "master",
+        "description": null,
+        "homepage": null,
+        "owner": "MacaylaMarvelous81",
+        "repo": "nix-exprs",
+        "rev": "6a2d1e1d42dbb14c8daf7e5c1164bcf6931b474d",
+        "sha256": "1ww2cpsyz58kdj0ji8r6xp780chdw1jscmppg5j23iyw6g7w9wz0",
+        "type": "tarball",
+        "url": "https://github.com/MacaylaMarvelous81/nix-exprs/archive/6a2d1e1d42dbb14c8daf7e5c1164bcf6931b474d.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "niri-flake": {
+        "branch": "main",
+        "description": "Nix-native configuration for niri",
+        "homepage": "https://github.com/YaLTeR/niri",
+        "owner": "sodiboo",
+        "repo": "niri-flake",
+        "rev": "535ebbe038039215a5d1c6c0c67f833409a5be96",
+        "sha256": "0sqflca0lyy0c7bcjig3071cas78ixnh4l0p2lds98idijx67m1k",
+        "type": "tarball",
+        "url": "https://github.com/sodiboo/niri-flake/archive/535ebbe038039215a5d1c6c0c67f833409a5be96.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nixpkgs": {
+        "branch": "nixos-unstable",
+        "description": "Nix Packages collection",
+        "homepage": null,
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "4bd9165a9165d7b5e33ae57f3eecbcb28fb231c9",
+        "sha256": "0ws5sm8ni5ha8ppa60f3v83c21rqp76andh62n066v3q6rh8vy4p",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/4bd9165a9165d7b5e33ae57f3eecbcb28fb231c9.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "sops-nix": {
+        "branch": "master",
+        "description": "Atomic secret provisioning for NixOS based on sops",
+        "homepage": "",
+        "owner": "Mic92",
+        "repo": "sops-nix",
+        "rev": "bef289e2248991f7afeb95965c82fbcd8ff72598",
+        "sha256": "1lmd6pwil1n4mb90h5krlkpa4h0nypqx8npggkmidsjmy4ylc48d",
+        "type": "tarball",
+        "url": "https://github.com/Mic92/sops-nix/archive/bef289e2248991f7afeb95965c82fbcd8ff72598.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "stylix": {
+        "branch": "master",
+        "description": "Theming framework for NixOS, Home Manager, nix-darwin, and Nix-on-Droid [maintainers=@0xda157, @danth, @trueNAHO]",
+        "homepage": "https://nix-community.github.io/stylix/",
+        "owner": "nix-community",
+        "repo": "stylix",
+        "rev": "84971726c7ef0bb3669a5443e151cc226e65c518",
+        "sha256": "0zrfks6z9jd5yd4nz02clv2bd73ry6nlpixsspmaadjyzxqzjl00",
+        "type": "tarball",
+        "url": "https://github.com/nix-community/stylix/archive/84971726c7ef0bb3669a5443e151cc226e65c518.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "wrappers": {
+        "branch": "main",
+        "description": "Library for using modules to wrap packages with configuration directly, and a collection of pre-built wrapper modules!",
+        "homepage": "https://birdeehub.github.io/nix-wrapper-modules/",
+        "owner": "BirdeeHub",
+        "repo": "nix-wrapper-modules",
+        "rev": "8c89399e50d6b6f7e8bd4cea70f4dc71e85c892e",
+        "sha256": "1gcj4rv4nrzd1arimx0dvxln5fazk3vfs3g9hzwizgc94m3w5cbv",
+        "type": "tarball",
+        "url": "https://github.com/BirdeeHub/nix-wrapper-modules/archive/8c89399e50d6b6f7e8bd4cea70f4dc71e85c892e.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}

@@ -5,7 +5,7 @@
 { pkgs, ... }:
 
 let
-  sources = import ./npins;
+  sources = import ./nix/sources.nix;
 in
 {
   imports = [
@@ -30,8 +30,7 @@ in
     inherit sources;
   };
 
-  pinning.nixpkgs = sources.nixos;
-  pinning.npinsDirectory = "/etc/nixos/machines/dell-inspiron7773/npins";
+  pinning.nixpkgs = sources.nixpkgs;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -87,6 +86,9 @@ in
   environment.systemPackages = with pkgs; [
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
+    (writeShellScriptBin "nixos-self-rebuild" ''
+      nixos-rebuild -f /etc/nixos/machines/dell-inspiron7773/default.nix "$@"
+    '')
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
