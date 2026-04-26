@@ -71,6 +71,18 @@
         "url": "https://github.com/NixOS/nixpkgs/archive/0726a0ecb6d4e08f6adced58726b95db924cef57.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "nixvim": {
+        "branch": "main",
+        "description": "Configure Neovim with Nix! [maintainers=@GaetanLepage, @traxys, @mattsturgeon, @khaneliman]",
+        "homepage": "https://nix-community.github.io/nixvim",
+        "owner": "nix-community",
+        "repo": "nixvim",
+        "rev": "f6fd130ad3b95c3c039fd7f882825c49f7e70bde",
+        "sha256": "0l3clcymyyshaayxwkviymba07km4qvl6rl0nsw06119cqb7x742",
+        "type": "tarball",
+        "url": "https://github.com/nix-community/nixvim/archive/f6fd130ad3b95c3c039fd7f882825c49f7e70bde.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "sops-nix": {
         "branch": "master",
         "description": "Atomic secret provisioning for NixOS based on sops",

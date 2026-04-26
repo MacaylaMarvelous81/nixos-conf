@@ -46,6 +46,7 @@ in
           ../../../home-manager/modules
 
           (import ../../../home-manager/inputs.nix { inherit (cfg) sources; })
+          ((import cfg.sources.nixvim).homeModules.nixvim)
         ];
 
         home.stateVersion = "24.11";
@@ -141,19 +142,29 @@ in
         usermod.hydrus.enable = true;
         usermod.atool.enable = true;
         usermod.wallpaper.enable = true;
-        usermod.zed-editor.enable = true;
         usermod.vintagestory.enable = true;
         usermod.rofi.enable = true;
         usermod.waybar.enable = true;
+        usermod.nixvim = {
+          enable = true;
+          neovide = true;
+        };
 
         programs.calibre.enable = true;
         programs.prismlauncher.enable = true;
         programs.obs-studio.enable = true;
+        programs.qalculate = {
+          enable = true;
+          package = pkgs.qalculate-qt;
+        };
         programs.niri.settings = {
           debug = {
             render-drm-device = "/dev/dri/card1";
           };
         };
+
+        # new default value in stateVersion 26.04
+        gtk.gtk4.theme = null;
 
         services.dunst.enable = true;
 
