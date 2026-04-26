@@ -162,6 +162,7 @@ in
             render-drm-device = "/dev/dri/card1";
           };
         };
+        programs.feh.enable = true;
 
         # new default value in stateVersion 26.04
         gtk.gtk4.theme = null;
@@ -174,11 +175,41 @@ in
           enable = true;
 
           defaultApplications = {
-            "text/html" = "firefox.desktop";
-            "x-scheme-handler/http" = "firefox.dekstop";
-            "x-scheme-handler/https" = "firefox.desktop";
-            "application/x-extension-html" = "firefox.desktop";
+            "text/html" = [ "firefox.desktop" ];
+            "x-scheme-handler/http" = [ "firefox.dekstop" ];
+            "x-scheme-handler/https" = [ "firefox.desktop" ];
+            "application/x-extension-html" = [ "firefox.desktop" ];
+
+            "text/plain" = [ "neovide.desktop" ];
           };
+          defaultApplicationPackages = [ config.programs.feh.package ];
+          #   ++ builtins.listToAttrs (
+          #     map
+          #       (name: {
+          #         inherit name;
+          #         value = [ "feh.desktop" ];
+          #       })
+          #       [
+          #         "image/bmp"
+          #         "image/gif"
+          #         "image/jpeg"
+          #         "image/jpg"
+          #         "image/pjpeg"
+          #         "image/png"
+          #         "image/tiff"
+          #         "image/webp"
+          #         "image/x-bmp"
+          #         "image/x-pcx"
+          #         "image/x-png"
+          #         "image/x-portable-anymap"
+          #         "image/x-portable-bitmap"
+          #         "image/x-portable/graymap"
+          #         "image/x-portable-pixmap"
+          #         "image/x-tga"
+          #         "image/x-xbitmap"
+          #         "image/heic"
+          #       ]
+          #   );
         };
       };
   };
