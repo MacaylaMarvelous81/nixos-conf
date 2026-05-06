@@ -5,10 +5,10 @@
         "homepage": null,
         "owner": "emmanuelrosa",
         "repo": "erosanix",
-        "rev": "3fc07ae67fc4fbc0f3630b24273c31c5c66ccb40",
-        "sha256": "17xjf60v8xqgzwm21crbk0ziwm35ycwss4p42mmc5zcymbpdplcr",
+        "rev": "81979773b7af17ac6140f45e168911bd378a72fd",
+        "sha256": "0hbks64ckh7a0jhz7ngzk5wl4h1g1aa0wb5yh8xxqm0vyxwxn9yc",
         "type": "tarball",
-        "url": "https://github.com/emmanuelrosa/erosanix/archive/3fc07ae67fc4fbc0f3630b24273c31c5c66ccb40.tar.gz",
+        "url": "https://github.com/emmanuelrosa/erosanix/archive/81979773b7af17ac6140f45e168911bd378a72fd.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "flake-compat": {
@@ -29,10 +29,10 @@
         "homepage": "https://nix-community.github.io/home-manager/",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "0379e433a85184be523f98ffd1715d0fb4320bc9",
-        "sha256": "1y9qk8mj4b429xlgxi0hclzf86cnw75603p4a0idknlbfynw5ymy",
+        "rev": "00ed86e58bb6979a7921859fd1615d19382eac5c",
+        "sha256": "0a0lfyn18kckssdgwm2n166g2fl673fvzpwsc38v1aqrzssi0jlx",
         "type": "tarball",
-        "url": "https://github.com/nix-community/home-manager/archive/0379e433a85184be523f98ffd1715d0fb4320bc9.tar.gz",
+        "url": "https://github.com/nix-community/home-manager/archive/00ed86e58bb6979a7921859fd1615d19382eac5c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "macaylamarvelous81-pkgs": {
@@ -53,10 +53,10 @@
         "homepage": "https://github.com/YaLTeR/niri",
         "owner": "sodiboo",
         "repo": "niri-flake",
-        "rev": "73b10d69d6c8b3836ff6581004024282f0a4cd15",
-        "sha256": "058nrcxn1y558cc9pdfwc2frymq0kkqlqdbn61hxfb59lfs8p6ck",
+        "rev": "6e900d2d23f32b88a1d97c38d1f24413cce66c90",
+        "sha256": "08g528wvlknjbn95lgsa8by56pdc1asiss82sy6srs167pim3w9k",
         "type": "tarball",
-        "url": "https://github.com/sodiboo/niri-flake/archive/73b10d69d6c8b3836ff6581004024282f0a4cd15.tar.gz",
+        "url": "https://github.com/sodiboo/niri-flake/archive/6e900d2d23f32b88a1d97c38d1f24413cce66c90.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
@@ -65,10 +65,10 @@
         "homepage": null,
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "15f4ee454b1dce334612fa6843b3e05cf546efab",
-        "sha256": "17pr9kf46019gf9nkg7jsa0h81adwbkdjwlk0i57nycnhad3vph1",
+        "rev": "549bd84d6279f9852cae6225e372cc67fb91a4c1",
+        "sha256": "0dchsfq8czjg8iwr60fxmqnglllchcy64wp60b8wx4wd9mwn0rw4",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/15f4ee454b1dce334612fa6843b3e05cf546efab.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/549bd84d6279f9852cae6225e372cc67fb91a4c1.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixvim": {
@@ -77,10 +77,10 @@
         "homepage": "https://nix-community.github.io/nixvim",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "a67d9cd6ff725a763afe88727aac73208ded3bf4",
-        "sha256": "1ksbsvldg0rghlwbx9f4n9l3dr2xl6z06avyn4jps4yvmsbamcq0",
+        "rev": "7986a276960b4dfaed9bb2c3c438b5ba71ae08f1",
+        "sha256": "06dlvhvi31vaq1lbav3bkwzpxlcgy7kfh2lwcv17ryhm0f126p0c",
         "type": "tarball",
-        "url": "https://github.com/nix-community/nixvim/archive/a67d9cd6ff725a763afe88727aac73208ded3bf4.tar.gz",
+        "url": "https://github.com/nix-community/nixvim/archive/7986a276960b4dfaed9bb2c3c438b5ba71ae08f1.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "sops-nix": {
@@ -89,10 +89,10 @@
         "homepage": "",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "8eaee5c45428b28b8c47a83e4c09dccec5f279b5",
-        "sha256": "1ha37kyn11dj5k38nbasybp4fnmm6iy1lbzvxfydlk4f55j9kkvd",
+        "rev": "c591bf665727040c6cc5cb409079acb22dcce33c",
+        "sha256": "0zxy0kfhhi0dq5jz0gkx9lb3m02a1gzkm86dvsga614kbair3wam",
         "type": "tarball",
-        "url": "https://github.com/Mic92/sops-nix/archive/8eaee5c45428b28b8c47a83e4c09dccec5f279b5.tar.gz",
+        "url": "https://github.com/Mic92/sops-nix/archive/c591bf665727040c6cc5cb409079acb22dcce33c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "stylix": {
@@ -101,10 +101,10 @@
         "homepage": "https://nix-community.github.io/stylix/",
         "owner": "nix-community",
         "repo": "stylix",
-        "rev": "20ff51f523e2dd67e5f31a321719d30708c1b771",
-        "sha256": "0nldc8bhpdgdiwvxv87srqx5q0ws8a300kaj7y4q07gd617r5fz9",
+        "rev": "7989a1054b01153212dede6005abfd1576b8328c",
+        "sha256": "0n90xzm98jkiwp2iaqpx1vlxzkjn3yg5xl4rps750vhyzk6grcal",
         "type": "tarball",
-        "url": "https://github.com/nix-community/stylix/archive/20ff51f523e2dd67e5f31a321719d30708c1b771.tar.gz",
+        "url": "https://github.com/nix-community/stylix/archive/7989a1054b01153212dede6005abfd1576b8328c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "wrappers": {
@@ -113,10 +113,10 @@
         "homepage": "https://birdeehub.github.io/nix-wrapper-modules/",
         "owner": "BirdeeHub",
         "repo": "nix-wrapper-modules",
-        "rev": "1792c664c565741ef0993f3fd27d94c358f412ab",
-        "sha256": "0pic2j38fa7p680qpwiz4z4hlh2yfy1478iixi7j5lpddxs4hyrm",
+        "rev": "dc5184095ad488e937ec308b52c9c0b218959d8b",
+        "sha256": "0dm4f47nck0pg3qh3nmk9nj8hbd5i8z0n2qdzfrxhxxxwphbcd6h",
         "type": "tarball",
-        "url": "https://github.com/BirdeeHub/nix-wrapper-modules/archive/1792c664c565741ef0993f3fd27d94c358f412ab.tar.gz",
+        "url": "https://github.com/BirdeeHub/nix-wrapper-modules/archive/dc5184095ad488e937ec308b52c9c0b218959d8b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }
