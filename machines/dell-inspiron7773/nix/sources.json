@@ -35,18 +35,6 @@
         "url": "https://github.com/nix-community/home-manager/archive/00ed86e58bb6979a7921859fd1615d19382eac5c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
-    "macaylamarvelous81-pkgs": {
-        "branch": "master",
-        "description": null,
-        "homepage": null,
-        "owner": "MacaylaMarvelous81",
-        "repo": "nix-exprs",
-        "rev": "6a2d1e1d42dbb14c8daf7e5c1164bcf6931b474d",
-        "sha256": "1ww2cpsyz58kdj0ji8r6xp780chdw1jscmppg5j23iyw6g7w9wz0",
-        "type": "tarball",
-        "url": "https://github.com/MacaylaMarvelous81/nix-exprs/archive/6a2d1e1d42dbb14c8daf7e5c1164bcf6931b474d.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "niri-flake": {
         "branch": "main",
         "description": "Nix-native configuration for niri",
