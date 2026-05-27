@@ -55,6 +55,7 @@ in
           "aseprite"
           "idea"
           "rider"
+          "rust-rover"
         ];
 
         home.packages = with pkgs; [
@@ -63,6 +64,7 @@ in
           aseprite
           jetbrains.idea
           jetbrains.rider
+          jetbrains.rust-rover
           kdePackages.okular
           krita
           erosanix.defaultNix.packages."${builtins.currentSystem}".mkwindowsapp-tools
