@@ -35,6 +35,18 @@
         "url": "https://github.com/nix-community/home-manager/archive/1a95e2efb477959b70b4a14c51035975c0481df6.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "lazyvim-nix": {
+        "branch": "main",
+        "description": "This flake provides a bleeding edge LazyVim  home-manager module, allowing you to install and configure LazyVim declaratively on NixOS. It tracks LazyVim releases automatically, and uses the latest plugin versions at the time of a LazyVim release.",
+        "homepage": "",
+        "owner": "pfassina",
+        "repo": "lazyvim-nix",
+        "rev": "5397d6bbeae7405eb4efb350e655f98af050fbc6",
+        "sha256": "05r09a7925virmic0y7ps89ljkcqczbad305z8kijqg3nfpvqyys",
+        "type": "tarball",
+        "url": "https://github.com/pfassina/lazyvim-nix/archive/5397d6bbeae7405eb4efb350e655f98af050fbc6.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "niri-flake": {
         "branch": "main",
         "description": "Nix-native configuration for niri",
