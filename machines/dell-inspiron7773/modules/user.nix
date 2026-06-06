@@ -146,6 +146,10 @@ in
         usermod.vintagestory.enable = true;
         usermod.rofi.enable = true;
         usermod.waybar.enable = true;
+        usermod.neovim = {
+          enable = true;
+          neovide = true;
+        };
 
         programs.calibre.enable = true;
         programs.prismlauncher.enable = true;
@@ -160,7 +164,6 @@ in
           };
         };
         programs.feh.enable = true;
-        programs.lazyvim.enable = true;
 
         # new default value in stateVersion 26.04
         gtk.gtk4.theme = null;
