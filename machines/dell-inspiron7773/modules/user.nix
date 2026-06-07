@@ -160,7 +160,7 @@ in
         };
         programs.niri.settings = {
           debug = {
-            render-drm-device = "/dev/dri/card1";
+            render-drm-device = "/dev/dri/card0";
           };
         };
         programs.feh.enable = true;
