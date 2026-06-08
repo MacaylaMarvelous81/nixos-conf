@@ -55,6 +55,7 @@ in
           "idea"
           "rider"
           "rust-rover"
+          "SSEEdit"
         ];
 
         home.packages = with pkgs; [
@@ -162,7 +163,7 @@ in
         programs.feh.enable = true;
 
         # new default value in stateVersion 26.04
-        gtk.gtk4.theme = null;
+        gtk.gtk4.theme = lib.mkDefault null;
 
         services.dunst.enable = true;
 
