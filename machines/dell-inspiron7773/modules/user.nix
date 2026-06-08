@@ -158,11 +158,7 @@ in
           enable = true;
           package = pkgs.qalculate-qt;
         };
-        programs.niri.settings = {
-          debug = {
-            render-drm-device = "/dev/dri/card0";
-          };
-        };
+
         programs.feh.enable = true;
 
         # new default value in stateVersion 26.04
