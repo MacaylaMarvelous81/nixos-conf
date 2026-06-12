@@ -1,0 +1,21 @@
+{
+  "pins": {
+    "nixos-raspberrypi": {
+      "type": "GitRelease",
+      "repository": {
+        "type": "GitHub",
+        "owner": "nvmd",
+        "repo": "nixos-raspberrypi"
+      },
+      "pre_releases": false,
+      "version_upper_bound": null,
+      "release_prefix": null,
+      "submodules": false,
+      "version": "v1.20260517.0",
+      "revision": "06c6e3513e1ee64b651913193fc6ac38aa4963f5",
+      "url": "https://api.github.com/repos/nvmd/nixos-raspberrypi/tarball/refs/tags/v1.20260517.0",
+      "hash": "sha256-MInilg7B/06c34SwOuGSBho4l0H1EZcmvxTkSWCs5pE="
+    }
+  },
+  "version": 8
+}

@@ -1,9 +1,7 @@
 {
-  sources ? import ./nix/sources.nix,
+  sources ? import ./npins,
   nixos-raspberrypi ? import sources.nixos-raspberrypi,
-  nixosEval ? import "${sources.nixpkgs}/nixos/lib/eval-config.nix",
 }:
-nixosEval {
-  specialArgs = { inherit nixos-raspberrypi; };
+nixos-raspberrypi.lib.nixosSystem {
   modules = [ ./configuration.nix ];
 }
