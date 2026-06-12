@@ -29,10 +29,10 @@
         "homepage": "https://nix-community.github.io/home-manager/",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "4fe95527cbe952713318ada8a4d122e1a6ab120f",
-        "sha256": "1jrcxqqrgc3ar5dn5lbh7x0xhh77kf1z2v2gxlxgw8mn1ah3kh38",
+        "rev": "486595d2cf49cfcd649b58a284fa11ac0e34da22",
+        "sha256": "19xfzmpx223rp32q5vrzb8bh1m0pl78170f3z2rcal70c9mdlag6",
         "type": "tarball",
-        "url": "https://github.com/nix-community/home-manager/archive/4fe95527cbe952713318ada8a4d122e1a6ab120f.tar.gz",
+        "url": "https://github.com/nix-community/home-manager/archive/486595d2cf49cfcd649b58a284fa11ac0e34da22.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "lazyvim-nix": {
@@ -41,10 +41,10 @@
         "homepage": "",
         "owner": "pfassina",
         "repo": "lazyvim-nix",
-        "rev": "5397d6bbeae7405eb4efb350e655f98af050fbc6",
-        "sha256": "05r09a7925virmic0y7ps89ljkcqczbad305z8kijqg3nfpvqyys",
+        "rev": "d1f9bd2bfff35708dfaf75351bce06580a862f61",
+        "sha256": "1vllbymzykp1ddhn2xlmxj2nqlfvlxr39gch4mj21hrqp547ac3v",
         "type": "tarball",
-        "url": "https://github.com/pfassina/lazyvim-nix/archive/5397d6bbeae7405eb4efb350e655f98af050fbc6.tar.gz",
+        "url": "https://github.com/pfassina/lazyvim-nix/archive/d1f9bd2bfff35708dfaf75351bce06580a862f61.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "niri-flake": {
@@ -53,10 +53,10 @@
         "homepage": "https://github.com/YaLTeR/niri",
         "owner": "sodiboo",
         "repo": "niri-flake",
-        "rev": "b0a0cf623fbc48e572bff38b6302a1e172aaf011",
-        "sha256": "1vr4qcbsr4ik9sgw8cl7bf0s28gsk36x7ib91hmx3hi7g3pfkq0q",
+        "rev": "eb5789cba8d37802d330df5a13c691622c83121f",
+        "sha256": "1qn5ai39pnwvvc9f294a79zqapcpv78k5d2q2xswr0l3pbiim3lf",
         "type": "tarball",
-        "url": "https://github.com/sodiboo/niri-flake/archive/b0a0cf623fbc48e572bff38b6302a1e172aaf011.tar.gz",
+        "url": "https://github.com/sodiboo/niri-flake/archive/eb5789cba8d37802d330df5a13c691622c83121f.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
@@ -65,10 +65,10 @@
         "homepage": null,
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "a799d3e3886da994fa307f817a6bc705ae538eeb",
-        "sha256": "11mhk782xy1n58518f86k6fcvxjaaim3mk9nmhx68fg5i2jg9ayx",
+        "rev": "9ae611a455b90cf061d8f332b977e387bda8e1ca",
+        "sha256": "1znw228lgab6jw7kqsd2vvcryp0wsg2714p33lg74zm5ffaidpwr",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/a799d3e3886da994fa307f817a6bc705ae538eeb.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/9ae611a455b90cf061d8f332b977e387bda8e1ca.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixvim": {
@@ -77,10 +77,10 @@
         "homepage": "https://nix-community.github.io/nixvim",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "82f2ec369eb597554a71ec82f33922d01b7dba8f",
-        "sha256": "19vwcqxyhr4pwfwg649f5dqgacq2ph45pi0ms0cz4zp8n2kwpr5r",
+        "rev": "e9fbbd56eab78751ba4c166c31a1667042528ced",
+        "sha256": "1zapcwlmq1vs91sxdya17227azis4y20j1mbnk5mbpm7mggr4jzr",
         "type": "tarball",
-        "url": "https://github.com/nix-community/nixvim/archive/82f2ec369eb597554a71ec82f33922d01b7dba8f.tar.gz",
+        "url": "https://github.com/nix-community/nixvim/archive/e9fbbd56eab78751ba4c166c31a1667042528ced.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "sops-nix": {
@@ -101,10 +101,10 @@
         "homepage": "https://nix-community.github.io/stylix/",
         "owner": "nix-community",
         "repo": "stylix",
-        "rev": "3a02d9f73608641b28e08b26acb0b0b47c05f14b",
-        "sha256": "18s4jx7zi34ppr5fgk6n6d1gh0fnxcb84gnflbsy1sclrqv19c5v",
+        "rev": "a378e4c09031fb15a4d65da88aa628f71fc52f6b",
+        "sha256": "0in6xasb0x8lcgb0s60jn4yzd7kp08fgij1nq6gxmsc28qhhdrqb",
         "type": "tarball",
-        "url": "https://github.com/nix-community/stylix/archive/3a02d9f73608641b28e08b26acb0b0b47c05f14b.tar.gz",
+        "url": "https://github.com/nix-community/stylix/archive/a378e4c09031fb15a4d65da88aa628f71fc52f6b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "wrappers": {
