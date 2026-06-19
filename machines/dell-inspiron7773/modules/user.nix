@@ -59,16 +59,6 @@ in
         ];
 
         home.packages = with pkgs; [
-          (limo.override { withUnrar = true; })
-          dragon-drop
-          aseprite
-          jetbrains.idea
-          jetbrains.rider
-          jetbrains.rust-rover
-          kdePackages.okular
-          krita
-          erosanix.defaultNix.packages."${builtins.currentSystem}".mkwindowsapp-tools
-          macaylamarvelous81-pkgs.sseedit
           (buildFHSEnv {
             # bit of a mess of an adhoc wrapper...
             name = "stellaris-gog-unpacked-env";
@@ -122,6 +112,17 @@ in
             '';
             runScript = "\"${config.home.homeDirectory}\"/GOG\\ Games/Stellaris/start.sh";
           })
+          (limo.override { withUnrar = true; })
+          aseprite
+          dragon-drop
+          erosanix.defaultNix.packages."${builtins.currentSystem}".mkwindowsapp-tools
+          jetbrains.idea
+          jetbrains.rider
+          jetbrains.rust-rover
+          kdePackages.ark
+          kdePackages.okular
+          krita
+          macaylamarvelous81-pkgs.sseedit
         ];
 
         home.shellAliases = {
