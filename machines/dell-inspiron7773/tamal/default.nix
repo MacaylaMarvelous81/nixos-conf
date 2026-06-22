@@ -28,7 +28,7 @@ OF THIS SOFTWARE.
 }:
 
 let lock = builtins.fromJSON (builtins.readFile ./lock.json); in
-assert (lock.v == "1.1.0");
+assert (lock.v == "1.2.0");
 let
 	local-patches = {
 		"nixpkgs-pr411257" = ./nixpkgs-pr411257.patch;

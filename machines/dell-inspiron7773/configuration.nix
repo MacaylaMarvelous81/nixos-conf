@@ -5,7 +5,7 @@
 { pkgs, ... }:
 
 let
-  sources = import ./nix/sources.nix;
+  sources = import ./tamal { };
 in
 {
   imports = [
@@ -15,7 +15,7 @@ in
 
     (import "${sources.home-manager}/nixos")
 
-    # ../../pinning.nix
+    ../../pinning.nix
     ../../modules
   ];
 
@@ -30,7 +30,7 @@ in
     inherit sources;
   };
 
-  # pinning.nixpkgs = sources.nixpkgs;
+  pinning.nixpkgs = sources.nixpkgs;
   nix.channel.enable = false;
 
   # Bootloader.
