@@ -1,5 +1,5 @@
 {
-  sources ? import ./nix/sources.nix,
+  sources ? import ./tamal { },
   nixosEval ? import "${sources.nixpkgs}/nixos/lib/eval-config.nix",
 }:
 nixosEval {
