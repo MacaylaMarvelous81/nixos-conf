@@ -15,12 +15,12 @@ in
 
     (import "${sources.home-manager}/nixos")
 
-    ../../pinning.nix
+    # ../../pinning.nix
     ../../modules
   ];
 
   osusermod.steam.enable = true;
-  machine.backup.enable = true;
+  machine.backup.enable = false;
   machine.graphics.enable = true;
   machine.graphical-session.enable = true;
   machine.docker.enable = true;
@@ -30,7 +30,8 @@ in
     inherit sources;
   };
 
-  pinning.nixpkgs = sources.nixpkgs;
+  # pinning.nixpkgs = sources.nixpkgs;
+  nix.channel.enable = false;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

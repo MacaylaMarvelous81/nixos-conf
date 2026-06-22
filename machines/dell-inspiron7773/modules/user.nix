@@ -123,6 +123,9 @@ in
           kdePackages.okular
           krita
           macaylamarvelous81-pkgs.sseedit
+          nixtamal
+          pijul
+          wasm4
         ];
 
         home.shellAliases = {
