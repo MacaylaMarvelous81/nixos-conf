@@ -114,6 +114,7 @@ in
           })
           (limo.override { withUnrar = true; })
           aseprite
+          dino
           dragon-drop
           erosanix.defaultNix.packages."${builtins.currentSystem}".mkwindowsapp-tools
           jetbrains.idea
