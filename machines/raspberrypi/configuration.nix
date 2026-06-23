@@ -39,7 +39,18 @@
     virtualHosts."pyrodax.com" = {
       forceSSL = true;
       useACMEHost = "pyrodax.com";
-      locations."/.well-known/".root = "/var/lib/acme/acme-challenge/";
+      root = "/srv/www";
+    };
+    virtualHosts."openpgpkey.pyrodax.com" = {
+      forceSSL = true;
+      useACMEHost = "pyrodax.com";
+      # if separate root used, static website could be built with nix?
+      locations."/.well-known/openpgpkey" = {
+        root = "/srv/www";
+        extraConfig = ''
+          add_header Access-Control-Allow-Origin *;
+        '';
+      };
     };
   };
 
@@ -74,6 +85,7 @@
         extraDomainNames = [
           "conference.pyrodax.com"
           "upload.pyrodax.com"
+          "openpgpkey.pyrodax.com"
         ];
         postRun = ''
           install -o prosody -g prosody fullchain.pem /var/lib/prosody/fullchain.pem
