@@ -18,7 +18,7 @@
     description = "Jomar Milan";
     extraGroups = [ "wheel" ];
     initialPassword = "raspberrypi";
-    packages = with pkgs; [ ];
+    packages = with pkgs; [ git ];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHOfZ3GVOc4/hDqYzxlfg41y5MgtVD9WQxmN90QtHt4I jomarm@Jomars-MacBook-Pro.local"
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILpBFduvcSClZ7EtSMfhilspvAbOh6zs5zGUSZba2pKT jomarm@jomar-inspiron7773"
@@ -32,6 +32,16 @@
       PermitRootLogin = "no";
       AllowGroups = [ "users" ];
     };
+  };
+
+  services.cgit."git.pyrodax.com" = {
+    enable = true;
+    scanPath = "/srv/git";
+    gitHttpBackend = {
+      enable = true;
+      checkExportOkFiles = false;
+    };
+    nginx.virtualHost = "git.pyrodax.com";
   };
 
   services.nginx = {
@@ -51,6 +61,10 @@
           add_header Access-Control-Allow-Origin *;
         '';
       };
+    };
+    virtualHosts."git.pyrodax.com" = {
+      forceSSL = true;
+      useACMEHost = "git.pyrodax.com";
     };
   };
 
@@ -91,6 +105,9 @@
           install -o prosody -g prosody fullchain.pem /var/lib/prosody/fullchain.pem
           install -o prosody -g prosody key.pem /var/lib/prosody/key.pem
         '';
+      };
+      "git.pyrodax.com" = {
+        group = config.services.nginx.group;
       };
     };
   };
