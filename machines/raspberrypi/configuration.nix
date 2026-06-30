@@ -55,8 +55,6 @@
         server_name = "pyrodax.com";
         unix_socket_path = "/run/continuwuity/continuwuity.sock";
         # allow_registration = false;
-        trusted_servers = [ ];
-        query_trusted_key_servers_first_on_join = false;
         well_known = {
           client = "https://matrix.pyrodax.com";
           server = "matrix.pyrodax.com:443";
