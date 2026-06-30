@@ -117,9 +117,12 @@
       forceSSL = true;
       useACMEHost = "matrix.pyrodax.com";
       locations."/" = {
-        proxyPass = "http://unix:/run/continuwuity/continuwuity.sock:/";
+        proxyPass = "http://unix:/run/continuwuity/continuwuity.sock:$request_uri";
         recommendedProxySettings = true;
       };
+      extraConfig = ''
+        client_max_body_size 20M;
+      '';
     };
   };
 
