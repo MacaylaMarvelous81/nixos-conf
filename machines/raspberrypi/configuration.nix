@@ -25,6 +25,10 @@
     ];
   };
 
+  users.groups."${config.services.matrix-continuwuity.group}".members = [
+    config.services.nginx.user
+  ];
+
   services.openssh = {
     enable = true;
     settings = {
@@ -44,18 +48,39 @@
     nginx.virtualHost = "git.pyrodax.com";
   };
 
+  services.matrix-continuwuity = {
+    enable = true;
+    settings = {
+      global = {
+        server_name = "pyrodax.com";
+        unix_socket_path = "/run/continuwuity/continuwuity.sock";
+        # allow_registration = false;
+        trusted_servers = [ ];
+        query_trusted_key_servers_first_on_join = false;
+        well_known = {
+          client = "https://matrix.pyrodax.com";
+          server = "matrix.pyrodax.com:443";
+        };
+      };
+    };
+  };
+
   services.nginx = {
     enable = true;
     virtualHosts."pyrodax.com" = {
       forceSSL = true;
       useACMEHost = "pyrodax.com";
       root = "/srv/www";
+      locations."/.well-known/matrix/" = {
+        proxyPass = "http://unix:/run/continuwuity/continuwuity.sock:/.well-known/matrix/";
+        recommendedProxySettings = true;
+      };
     };
     virtualHosts."openpgpkey.pyrodax.com" = {
       forceSSL = true;
       useACMEHost = "pyrodax.com";
       # if separate root used, static website could be built with nix?
-      locations."/.well-known/openpgpkey" = {
+      locations."/.well-known/openpgpkey/" = {
         root = "/srv/www";
         extraConfig = ''
           add_header Access-Control-Allow-Origin *;
@@ -65,6 +90,36 @@
     virtualHosts."git.pyrodax.com" = {
       forceSSL = true;
       useACMEHost = "git.pyrodax.com";
+    };
+    virtualHosts."matrix.pyrodax.com" = {
+      listen = [
+        {
+          addr = "0.0.0.0";
+          port = 443;
+          ssl = true;
+        }
+        {
+          addr = "[::0]";
+          port = 443;
+          ssl = true;
+        }
+        {
+          addr = "0.0.0.0";
+          port = 8448;
+          ssl = true;
+        }
+        {
+          addr = "[::0]";
+          port = 8448;
+          ssl = true;
+        }
+      ];
+      forceSSL = true;
+      useACMEHost = "matrix.pyrodax.com";
+      locations."/" = {
+        proxyPass = "http://unix:/run/continuwuity/continuwuity.sock:/";
+        recommendedProxySettings = true;
+      };
     };
   };
 
@@ -107,6 +162,9 @@
         '';
       };
       "git.pyrodax.com" = {
+        group = config.services.nginx.group;
+      };
+      "matrix.pyrodax.com" = {
         group = config.services.nginx.group;
       };
     };
