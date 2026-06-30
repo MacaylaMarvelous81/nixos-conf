@@ -114,6 +114,7 @@ in
           })
           (limo.override { withUnrar = true; })
           aseprite
+          cinny-desktop
           dino
           dragon-drop
           erosanix.defaultNix.packages."${builtins.currentSystem}".mkwindowsapp-tools
@@ -126,6 +127,7 @@ in
           macaylamarvelous81-pkgs.sseedit
           nixtamal
           pijul
+          seahorse
           wasm4
         ];
 
