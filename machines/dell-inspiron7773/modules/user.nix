@@ -128,7 +128,6 @@ in
           nixtamal
           pijul
           seahorse
-          wasm4
         ];
 
         home.shellAliases = {
