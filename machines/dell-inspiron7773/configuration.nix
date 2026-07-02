@@ -104,11 +104,25 @@ in
 
   # List services that you want to enable:
 
-  services.offlineimap.enable = true;
-  services.udisks2.enable = true;
   services.blueman.enable = true;
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [ brlaser ];
+  };
+  services.udisks2.enable = true;
 
   hardware.bluetooth.enable = true;
+  hardware.printers = {
+    ensurePrinters = [
+      {
+        name = "Brother_DCP-L2540DW";
+        location = "Home";
+        deviceUri = "ipp://BRN30055C8A983A";
+        model = "drv:///brlaser.drv/brl2540d.ppd";
+      }
+    ];
+    ensureDefaultPrinter = "Brother_DCP-L2540DW";
+  };
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
