@@ -80,10 +80,6 @@ in
   ];
 
   nix.nixPath = [ "nixos-config=/etc/nixos/machines/dell-inspiron7773/configuration.nix" ];
-  nix.settings.substituters = [ "https://nixos-raspberrypi.cachix.org" ];
-  nix.settings.trusted-public-keys = [
-    "nixos-raspberrypi.cachix.org-1:4iMO9LXa8BqhU+Rpg6LQKiGa2lsNh/j2oiYLNOQ5sPI="
-  ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
