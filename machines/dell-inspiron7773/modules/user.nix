@@ -186,6 +186,9 @@ in
             "application/x-extension-html" = [ "firefox.desktop" ];
 
             "text/plain" = [ "neovide.desktop" ];
+
+            "inode/directory" = [ "pcmanfm-qt.desktop" ];
+            "inode/mount-point" = [ "pcmanfm-qt.desktop" ];
           };
           defaultApplicationPackages = [ config.programs.feh.package ];
           #   ++ builtins.listToAttrs (
