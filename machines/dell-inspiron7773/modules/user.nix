@@ -157,6 +157,7 @@ in
           enable = true;
           neovide = true;
         };
+        usermod.dunst.enable = true;
 
         programs.calibre.enable = true;
         programs.prismlauncher.enable = true;
@@ -171,7 +172,7 @@ in
         # new default value in stateVersion 26.04
         gtk.gtk4.theme = lib.mkDefault null;
 
-        services.dunst.enable = true;
+        services.udiskie.enable = true;
 
         xdg.portal.enable = true;
 
