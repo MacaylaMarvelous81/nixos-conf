@@ -80,6 +80,7 @@ in
   ];
 
   nix.nixPath = [ "nixos-config=/etc/nixos/machines/dell-inspiron7773/configuration.nix" ];
+  nix.settings.trusted-users = [ "@wheel" ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
