@@ -1,16 +1,9 @@
 {
   config,
   pkgs,
-  nixos-raspberrypi,
   ...
 }:
 {
-  imports = with nixos-raspberrypi.nixosModules; [
-    raspberry-pi-5.base
-  ];
-
-  boot.loader.raspberry-pi.bootloader = "kernel";
-
   networking.hostName = "raspberrypi";
 
   users.users.jomarm = {
@@ -200,54 +193,25 @@
     };
   };
 
-  system.nixos.tags =
-    let
-      cfg = config.boot.loader.raspberry-pi;
-    in
-    [
-      "raspberry-pi-${cfg.variant}"
-      cfg.bootloader
-      config.boot.kernelPackages.kernel.version
-    ];
-
-  fileSystems = {
-    "/" = {
-      device = "/dev/disk/by-label/NIXOS_SD";
-      fsType = "ext4";
-      options = [
-        "x-initrd.mount"
-        "noatime"
-      ];
-    };
-    "/boot/firmware" = {
-      device = "/dev/disk/by-label/FIRMWARE";
-      fsType = "vfat";
-      options = [
-        "noatime"
-        "noauto"
-        "x-systemd.automount"
-        "x-systemd.idle-timeout=1min"
-      ];
-    };
-  };
-
   nix.settings.trusted-users = [ "@wheel" ];
 
-  nixpkgs.hostPlatform = "aarch64-linux";
-  nixpkgs.overlays = [
-    (final: prev: {
-      matrix-continuwuity = pkgsCross.matrix-continuwuity.override {
-        inherit (final)
-          bzip2
-          zstd
-          rust-jemalloc-sys-unprefixed
-          liburing
-          rocksdb
-          ;
-        inherit (pkgsHost) pkg-config;
-      };
-    })
-  ];
-
   system.stateVersion = "25.11";
+
+  virtualisation.vmVariant = {
+    # avoid invalid requests to lets encrypt; should fall back to preliminary
+    # self-signed certs
+    security.acme.defaults.server = "https://localhost";
+
+    virtualisation.memorySize = 8044;
+    virtualisation.cores = 4;
+
+    # port forwarding with ssh should be sufficient to access other ports from host
+    virtualisation.forwardPorts = [
+      {
+        from = "host";
+        host.port = 2222;
+        guest.port = 22;
+      }
+    ];
+  };
 }
