@@ -4,40 +4,6 @@
   nixos-raspberrypi,
   ...
 }:
-let
-  pkgsHost = import pkgs.path {
-    localSystem = "x86_64-linux";
-  };
-
-  pkgsCross = import pkgs.path {
-    overlays = [
-      (final: prev: {
-        matrix-continuwuity = prev.matrix-continuwuity.overrideAttrs (
-          finalAttrs: prevAttrs: {
-            version = "0.5.10";
-
-            src = final.fetchFromGitea {
-              domain = "forgejo.ellis.link";
-              owner = "continuwuation";
-              repo = "continuwuity";
-              tag = "v${finalAttrs.version}";
-              hash = "sha256-oevEGYlAK/rMJhm200CkwerT5oVak8sJj0Fa6r6+J/Q=";
-            };
-
-            cargoDeps = prev.rustPlatform.fetchCargoVendor {
-              inherit (finalAttrs) version src;
-              name = "${finalAttrs.pname}-${finalAttrs.version}-vendor";
-              hash = "sha256-uvMiFURXxkLbbbwq4pG5hevsLZHQ1wVfTNvzQRTQWxE=";
-            };
-          }
-        );
-      })
-    ];
-
-    localSystem = "x86_64-linux";
-    crossSystem = "aarch64-linux";
-  };
-in
 {
   imports = with nixos-raspberrypi.nixosModules; [
     raspberry-pi-5.base
