@@ -113,7 +113,21 @@ in
             runScript = "\"${config.home.homeDirectory}\"/GOG\\ Games/Stellaris/start.sh";
           })
           (limo.override { withUnrar = true; })
-          aseprite
+          (aseprite.overrideAttrs (
+            finalAttrs: prevAttrs: {
+              postPatchHooks = [
+                # Aseprite's desktop file requests for the application to be
+                # executed with URIs, but then proceeds to fail finding files
+                # by URI, while working correctly with file paths. Such is
+                # the way of software, I guess.
+                ''
+                  substituteInPlace src/desktop/linux/aseprite.desktop \
+                    --replace-fail 'Exec=aseprite %U' 'Exec=aseprite %F'
+                ''
+              ]
+              ++ (prevAttrs.postPatchHooks or [ ]);
+            }
+          ))
           cinny-desktop
           dino
           dragon-drop
