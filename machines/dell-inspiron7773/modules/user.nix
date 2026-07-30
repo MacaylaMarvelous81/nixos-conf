@@ -54,7 +54,6 @@ in
           "aseprite"
           "idea"
           "rider"
-          "rust-rover"
           "SSEEdit"
         ];
 
@@ -134,7 +133,6 @@ in
           erosanix.defaultNix.packages."${builtins.currentSystem}".mkwindowsapp-tools
           jetbrains.idea
           jetbrains.rider
-          jetbrains.rust-rover
           kdePackages.ark
           kdePackages.okular
           krita
