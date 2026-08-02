@@ -157,6 +157,7 @@ in
             }
           ))
           cinny-desktop
+          deadbeef
           dino
           dragon-drop
           erosanix.defaultNix.packages."${builtins.currentSystem}".mkwindowsapp-tools
