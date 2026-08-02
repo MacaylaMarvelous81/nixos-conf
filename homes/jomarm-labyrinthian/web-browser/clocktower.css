@@ -1,0 +1,51 @@
+@-moz-document domain("clocktower.live"), domain("clocktower.online") {
+  /* Customized Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Mate&family=Quattrocento:wght@400;700&display=swap');
+  .token .name {font-size: 14px !important; text-transform: uppercase;}
+  .token .name .label {font-family: 'Mate', serif !important; /*fill: #593a17 !important;*/}
+  .player .name {font-size: 80%;}
+  h3 {font-family: 'Quattrocento', serif !important; font-weight: 700; font-size: 0.8em !important;}
+
+  /* Remove Demon Head Background */
+  #vote {background: none !important;}
+
+  /* Darken Modal Backgrounds */
+  .modal {background: #000}
+
+  /* Stack Reminder Tokens */
+  .circle .reminder {margin-top: -30px !important;}
+  .circle li:hover .reminder {margin-top: 2px !important;}
+  .circle li .reminder:nth-child(2) {margin-top: 10px !important;}
+  .player .name {top: 2px !important;}
+  .circle .reminder.custom .text {font-size: 50% !important;}
+
+  /* Revamped Character Tokens */
+  /* You can provide your own image in here to change the background of character tokens.
+    Put the same image URL in both below. */
+  .token {background-image: url("https://botc.app/assets/token-VPG3jS-a.webp") !important;}
+  .circle .token {background: none !important;}
+  .token::after {
+    background-image: url("https://botc.app/assets/token-VPG3jS-a.webp");
+    background-size: 100%; background-repeat: no-repeat; background-position: center 30%;
+    position: absolute; width: 100%; height: 100%; z-index: -1; content: "";
+  }
+
+  /* Rotate Tokens on Flipped Alignments */
+  /* IMPORTANT NOTE FOR FIREFOX:
+    Some versions of Firefox requires changing the "layout.css.has-selector.enabled" flag
+    in about:config to TRUE */
+  .icon, .name, .token::after {transition: transform 0.4s;}
+  li:has(:is(.traveler, .townsfolk, .outsider) ~ .evil, :is(.minion, .demon) ~ .good) .token .icon,
+  li:has(:is(.traveler, .townsfolk, .outsider) ~ .evil, :is(.minion, .demon) ~ .good) .token .name,
+  li:has(:is(.traveler, .townsfolk, .outsider) ~ .evil, :is(.minion, .demon) ~ .good) .token::after
+  { transform: rotateZ(180deg);}
+
+  .reminder {
+    background: url(data:image/webp;base64,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) 50%/110% !important;
+  }
+
+  .reminder > .text {
+    color: white !important;
+    text-shadow: none !important;
+  }
+}
