@@ -38,7 +38,6 @@ in
         pkgs,
         erosanix,
         macaylamarvelous81-pkgs,
-        wrappers,
         ...
       }:
       {
@@ -76,7 +75,8 @@ in
                 xz
                 zenity
               ];
-            # Based on steam env, + nss and nspr
+            # not sure exactly which of these are needed and which of these are not, but some
+            # are definitely needed
             multiPkgs =
               pkgs: with pkgs; [
                 glibc
@@ -92,6 +92,35 @@ in
                 libcap
                 nss
                 nspr
+
+                libxxf86vm
+                libGLU
+                wayland
+                libx11
+                libxext
+                libxcursor
+                libxi
+                libxinerama
+                libxrandr
+                libxrender
+                libxtst
+                libpng
+                libxscrnsaver
+                libxkbcommon
+                libbsd
+                SDL2
+                gtk2
+                pango
+                gdk-pixbuf
+                cairo
+                sndio
+                alsa-lib
+                libpulseaudio
+                openal
+                zlib
+                openssl
+                dbus
+                gcc-unwrapped.lib
               ];
             extraInstallCommands = ''
               mkdir -p $out/share/applications
