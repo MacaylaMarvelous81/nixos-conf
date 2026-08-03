@@ -288,6 +288,22 @@ in
         TimeoutStartSec = "120sec";
       };
     };
+    systemd.user.services.wallpaper = {
+      Unit = {
+        Description = "Wallpaper rendered with linux-wallpaperengine";
+        PartOf = [ "graphical-session.target" ];
+        After = [ "graphical-session.target" ];
+      };
+      Service = {
+        Type = "simple";
+        # Assumption: Wallpaper Engine is installed and workshop submissions are downloaded
+        ExecStart = "\"${pkgs.linux-wallpaperengine}/bin/linux-wallpaperengine\" --silent --screen-root eDP-1 --bg 2533132599 --property cultistarcher=0 --property cultistarcher2=0 --property lunaticdevotee=0 --property lunaticdevotee2=0 --property blocks=0 --property stardustdragon1=1 --property shine=1";
+        Restart = "on-failure";
+      };
+      Install = {
+        WantedBy = [ "graphical-session.target" ];
+      };
+    };
     systemd.user.timers.offlineimap = {
       Unit = {
         Description = "offlineimap timer";
