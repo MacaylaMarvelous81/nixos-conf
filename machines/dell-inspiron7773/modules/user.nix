@@ -223,10 +223,22 @@ in
           enable = true;
 
           defaultApplications = {
-            "text/html" = [ "firefox.desktop" ];
-            "x-scheme-handler/http" = [ "firefox.dekstop" ];
-            "x-scheme-handler/https" = [ "firefox.desktop" ];
-            "application/x-extension-html" = [ "firefox.desktop" ];
+            "text/html" = [
+              "librewolf.desktop"
+              "firefox.desktop"
+            ];
+            "x-scheme-handler/http" = [
+              "librewolf.desktop"
+              "firefox.desktop"
+            ];
+            "x-scheme-handler/https" = [
+              "librewolf.desktop"
+              "firefox.desktop"
+            ];
+            "application/x-extension-html" = [
+              "librewolf.desktop"
+              "firefox.desktop"
+            ];
 
             "text/plain" = [ "neovide.desktop" ];
 
