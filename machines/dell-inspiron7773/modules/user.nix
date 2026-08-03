@@ -244,6 +244,32 @@ in
 
             "inode/directory" = [ "pcmanfm-qt.desktop" ];
             "inode/mount-point" = [ "pcmanfm-qt.desktop" ];
+
+            # probably could be done with some pipe function or something
+            # not using defaultApplicationPackages because not all mime types of
+            # app being used for default
+            "application/gzip" = [ "org.kde.ark.desktop" ];
+            "application/x-bzip" = [ "org.kde.ark.desktop" ];
+            "application/x-bzip2" = [ "org.kde.ark.desktop" ];
+            "application/x-lzma" = [ "org.kde.ark.desktop" ];
+            "application/x-xz" = [ "org.kde.ark.desktop" ];
+            "application/zstd" = [ "org.kde.ark.desktop" ];
+            "application/x-lz4" = [ "org.kde.ark.desktop" ];
+            "application/x-lzip" = [ "org.kde.ark.desktop" ];
+            "application/x-lrzip" = [ "org.kde.ark.desktop" ];
+            "application/x-xar" = [ "org.kde.ark.desktop" ];
+            "application/x-tar" = [ "org.kde.ark.desktop" ];
+            "application/x-compressed-tar" = [ "org.kde.ark.desktop" ];
+            "application/x-bzip-compressed-tar" = [ "org.kde.ark.desktop" ];
+            "application/x-bzip2-compressed-tar" = [ "org.kde.ark.desktop" ];
+            "application/x-tarz" = [ "org.kde.ark.desktop" ];
+            "application/x-xz-compressed-tar" = [ "org.kde.ark.desktop" ];
+            "application/x-lzma-compressed-tar" = [ "org.kde.ark.desktop" ];
+            "application/x-lz4-compressed-tar" = [ "org.kde.ark.desktop" ];
+            "application/x-zstd-compressed-tar" = [ "org.kde.ark.desktop" ];
+            "application/x-7z-compressed" = [ "org.kde.ark.desktop" ];
+            "application/vnd.rar" = [ "org.kde.ark.desktop" ];
+            "application/zip" = [ "org.kde.ark.desktop" ];
           };
           defaultApplicationPackages = [ config.programs.feh.package ];
           #   ++ builtins.listToAttrs (
