@@ -11,7 +11,7 @@ let
       BackgroundPlaceholder = "";
       Background = pkgs.fetchurl {
         url = "https://images.steamusercontent.com/ugc/1701780623175527143/5BCE317B403D24A26A56EA0C42B516662E5C8896/";
-        hash = "";
+        hash = "sha256-Br0nOQkeLmSfKyrzCqMa1kwsxz2xGm1ILC1hV4wfhEQ=";
       };
     };
     embeddedTheme = "hyprland_kath";
