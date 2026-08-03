@@ -210,6 +210,7 @@ in
         };
 
         programs.feh.enable = true;
+        programs.freetube.enable = true;
 
         # new default value in stateVersion 26.04
         gtk.gtk4.theme = lib.mkDefault null;
