@@ -164,6 +164,8 @@ in
               "10%-"
             ];
           };
+
+          "Mod+E".spawn = [ "${pkgs.lxqt.pcmanfm-qt}/bin/pcmanfm-qt" ];
         };
 
         input = {
@@ -225,6 +227,5 @@ in
         ];
       };
     };
-
   };
 }

@@ -275,5 +275,11 @@ in
         };
       };
     };
+
+    wayland.windowManager.niri = lib.mkIf config.wayland.windowManager.niri.enable {
+      settings.binds = {
+        "Mod+B".spawn = [ "${config.programs.librewolf.finalPackage}/bin/librewolf" ];
+      };
+    };
   };
 }

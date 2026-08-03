@@ -29,6 +29,12 @@ in
         };
 
         programs.neovide.enable = true;
+
+        wayland.windowManager.niri = lib.mkIf config.wayland.windowManager.niri.enable {
+          settings.binds = {
+            "Mod+Z".spawn = [ "${config.programs.neovide.package}/bin/neovide" ];
+          };
+        };
       }
       (lib.optionalAttrs (builtins.hasAttr "lazyvim" options.programs) {
         programs.lazyvim = {
