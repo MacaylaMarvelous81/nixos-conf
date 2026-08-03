@@ -135,6 +135,7 @@ in
       };
       extraBinds = builtins.readFile "${config.programs.aerc.package}/share/aerc/binds.conf";
     };
+    programs.bash.enable = true;
     programs.calibre.enable = true;
     programs.feh.enable = true;
     programs.freetube.enable = true;
@@ -174,6 +175,14 @@ in
     programs.qalculate = {
       enable = true;
       package = pkgs.qalculate-qt;
+    };
+    programs.ssh = {
+      enable = true;
+      enableDefaultConfig = false;
+      settings."*" = {
+        UserKnownHostsFile = "~/.ssh/known_hosts";
+        ControlPath = "~/.ssh/master-%r@%n:%p";
+      };
     };
     programs.waybar = {
       enable = true;
