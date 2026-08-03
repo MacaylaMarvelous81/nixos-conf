@@ -68,6 +68,14 @@ in
                 view.ga = ":pipe -mb ${config.programs.git.package} am -3<Enter>";
               };
             };
+
+            offlineimap = {
+              enable = true;
+              # Assumption: jomarm-offlineimap-postsynchook available in nixpkgs package set
+              postSyncHookCommand = "${pkgs.jomarm-offlineimap-postsynchook}/bin/jomarm-offlineimap-postsynchook ${config.accounts.email.maildirBasePath}/${
+                config.accounts.email.accounts."jomarm".maildir.path
+              }/INBOX";
+            };
           };
         };
       };
@@ -132,6 +140,7 @@ in
         }
       ];
     };
+    programs.offlineimap.enable = true;
     programs.prismlauncher.enable = true;
     programs.qalculate = {
       enable = true;
@@ -146,6 +155,30 @@ in
       pinentry.package = pkgs.pinentry-qt;
     };
     services.udiskie.enable = true;
+
+    systemd.user.services.offlineimap = {
+      Unit = {
+        Description = "Offlineimap: a software to dispose your mailbox(es) as a local Maildir(s)";
+      };
+      Service = {
+        Type = "oneshot";
+        ExecStart = "${config.programs.offlineimap.package}/bin/offlineimap -u syslog -o -1";
+        TimeoutStartSec = "120sec";
+      };
+    };
+    systemd.user.timers.offlineimap = {
+      Unit = {
+        Description = "offlineimap timer";
+      };
+      Timer = {
+        Unit = "offlineimap.service";
+        OnCalendar = "*:0/3";
+        Persistent = "true";
+      };
+      Install = {
+        WantedBy = [ "default.target" ];
+      };
+    };
 
     xdg.mimeApps = {
       enable = true;
