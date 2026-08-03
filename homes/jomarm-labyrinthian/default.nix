@@ -10,6 +10,7 @@ in
 {
   imports = [
     ./hydrus
+    ./niri.nix
     ./text-editor.nix
     ./web-browser
   ];
@@ -21,6 +22,7 @@ in
   config = lib.mkIf cfg.enable {
     homes.jomarm-labyrinthian = {
       hydrus.enable = lib.mkDefault true;
+      niri.enable = lib.mkDefault true;
       text-editor.enable = lib.mkDefault true;
       web-browser.enable = lib.mkDefault true;
     };
