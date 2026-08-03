@@ -12,6 +12,7 @@ in
     ./hydrus
     ./niri.nix
     ./rofi.nix
+    ./stylix.nix
     ./text-editor.nix
     ./web-browser
   ];
@@ -25,6 +26,7 @@ in
       hydrus.enable = lib.mkDefault true;
       niri.enable = lib.mkDefault true;
       rofi.enable = lib.mkDefault true;
+      stylix.enable = lib.mkDefault true;
       text-editor.enable = lib.mkDefault true;
       web-browser.enable = lib.mkDefault true;
     };
