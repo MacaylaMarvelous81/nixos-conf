@@ -11,6 +11,7 @@ in
   imports = [
     ./hydrus
     ./niri.nix
+    ./rofi.nix
     ./text-editor.nix
     ./web-browser
   ];
@@ -23,6 +24,7 @@ in
     homes.jomarm-labyrinthian = {
       hydrus.enable = lib.mkDefault true;
       niri.enable = lib.mkDefault true;
+      rofi.enable = lib.mkDefault true;
       text-editor.enable = lib.mkDefault true;
       web-browser.enable = lib.mkDefault true;
     };
