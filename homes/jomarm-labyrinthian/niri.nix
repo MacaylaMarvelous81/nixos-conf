@@ -166,6 +166,7 @@ in
           };
 
           "Mod+E".spawn = [ "${pkgs.lxqt.pcmanfm-qt}/bin/pcmanfm-qt" ];
+          "Mod+T".spawn = [ "${config.programs.foot.package}/bin/foot" ];
         };
 
         input = {

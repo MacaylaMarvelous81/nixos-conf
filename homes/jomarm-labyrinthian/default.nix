@@ -140,6 +140,7 @@ in
     programs.bash.enable = true;
     programs.calibre.enable = true;
     programs.feh.enable = true;
+    programs.foot.enable = true;
     programs.freetube.enable = true;
     programs.git = {
       enable = true;
