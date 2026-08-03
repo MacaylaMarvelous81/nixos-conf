@@ -106,6 +106,7 @@ in
       kdePackages.okular
       krita
       (limo.override { withUnrar = true; })
+      lxqt.pcmanfm-qt
       nixtamal
       seahorse
     ];
@@ -131,6 +132,28 @@ in
     programs.calibre.enable = true;
     programs.feh.enable = true;
     programs.freetube.enable = true;
+    programs.git = {
+      enable = true;
+      package = pkgs.gitFull;
+      signing = {
+        format = "openpgp";
+        key = "F954C5C95AE7A312183DA76C6AC46A6F9A5618D8";
+        signByDefault = true;
+      };
+      settings = {
+        init.defaultBranch = "master";
+        user = {
+          name = "Jomar Milan";
+          email = "jomarm@pyrodax.com";
+        };
+        sendemail = {
+          smtpencryption = "ssl";
+          smtpserver = "smtp.purelymail.com";
+          smtpuser = "jomarm@pyrodax.com";
+        };
+        "diff \"json\"".textconv = "${pkgs.jq}/bin/jq .";
+      };
+    };
     programs.gpg = {
       enable = true;
       publicKeys = [
