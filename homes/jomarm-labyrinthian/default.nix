@@ -9,6 +9,7 @@ let
 in
 {
   imports = [
+    ./games/vintagestory.nix
     ./hydrus
     ./niri.nix
     ./rofi.nix
@@ -23,6 +24,7 @@ in
 
   config = lib.mkIf cfg.enable {
     homes.jomarm-labyrinthian = {
+      games.vintagestory.enable = lib.mkDefault true;
       hydrus.enable = lib.mkDefault true;
       niri.enable = lib.mkDefault true;
       rofi.enable = lib.mkDefault true;
