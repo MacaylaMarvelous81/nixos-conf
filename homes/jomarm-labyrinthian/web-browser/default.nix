@@ -258,9 +258,6 @@ in
                 };
               };
               settings = {
-                # or maybe a local file?
-                "browser.startup.homepage" = "https://pyrodax.com";
-
                 "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
               };
               userContent = ''
