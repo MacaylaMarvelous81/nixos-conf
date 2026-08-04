@@ -48,6 +48,24 @@ in
         ];
 
         homes.jomarm-labyrinthian.enable = true;
+        homes.jomarm-labyrinthian.games.vintagestory.package = pkgs.vintagestory.overrideAttrs (
+          finalAttrs: prevAttrs: {
+            # Applies to both vintagestory and vintagestory-server. I don't
+            # necessarily want to set these for vintagestory-server, but I also want
+            # to avoid wrapping a wrapper.
+            makeWrapperArgs = [
+              "--suffix"
+              "__NV_PRIME_RENDER_OFFLOAD=1"
+              "--suffix"
+              "__NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0"
+              "--suffix"
+              "__GLX_VENDOR_LIBRARY_NAME=nvidia"
+              "--suffix"
+              "__VK_LAYER_NV_optimus=NVIDIA_only"
+            ]
+            ++ prevAttrs.makeWrapperArgs;
+          }
+        );
 
         accounts.email.accounts."jomarm".passwordCommand =
           "cat ${config.home.homeDirectory}/.secrets/jomarm@pyrodax.com";
@@ -62,6 +80,7 @@ in
             "idea"
             "rider"
             "unrar"
+            "vintagestory"
           ];
 
         home.stateVersion = "24.11";
