@@ -34,57 +34,53 @@ in
     accounts.email = {
       certificatesFile = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
       accounts."jomarm" = {
-        accounts.email.accounts = {
-          "jomarm" = {
-            address = "jomarm@pyrodax.com";
-            gpg = {
-              encryptByDefault = true;
-              key = "6AC46A6F9A5618D8";
-              signByDefault = true;
-            };
-            imap = {
-              host = "imap.purelymail.com";
-              port = 993;
-              tls.enable = true;
-            };
-            smtp = {
-              host = "smtp.purelymail.com";
-              port = 465;
-              tls.enable = true;
-            };
-            userName = "jomarm@pyrodax.com";
-            # passwordCommand = "cat ${config.home.homeDirectory}/.secrets/jomarm@pyrodax.com";
-            primary = true;
-            realName = "Jomar Milan";
+        address = "jomarm@pyrodax.com";
+        gpg = {
+          encryptByDefault = true;
+          key = "6AC46A6F9A5618D8";
+          signByDefault = true;
+        };
+        imap = {
+          host = "imap.purelymail.com";
+          port = 993;
+          tls.enable = true;
+        };
+        smtp = {
+          host = "smtp.purelymail.com";
+          port = 465;
+          tls.enable = true;
+        };
+        userName = "jomarm@pyrodax.com";
+        # passwordCommand = "cat ${config.home.homeDirectory}/.secrets/jomarm@pyrodax.com";
+        primary = true;
+        realName = "Jomar Milan";
 
-            aerc = {
-              enable = true;
-              extraAccounts = {
-                pgp-opportunistic-encrypt = true;
-                pgp-auto-sign = true;
-                signature-file = pkgs.writeText "jomarm-email-sig" ''
-                  Jomar Milan
+        aerc = {
+          enable = true;
+          extraAccounts = {
+            pgp-opportunistic-encrypt = true;
+            pgp-auto-sign = true;
+            signature-file = "${pkgs.writeText "jomarm-email-sig" ''
+              Jomar Milan
 
-                  If possible, please sign and encrypt your emails with OpenPGP. My key is
-                  accessible via the WKD protocol, or at https://pyrodax.com/key.gpg with the
-                  following fingerprint:
+              If possible, please sign and encrypt your emails with OpenPGP. My key is
+              accessible via the WKD protocol, or at https://pyrodax.com/key.gpg with the
+              following fingerprint:
 
-                  F954 C5C9 5AE7 A312 183D  A76C 6AC4 6A6F 9A56 18D8
-                '';
-              };
-              extraBinds = {
-                view.ga = ":pipe -mb ${config.programs.git.package} am -3<Enter>";
-              };
-            };
-
-            offlineimap = {
-              enable = true;
-              # Assumption: jomarm-offlineimap-postsynchook available in nixpkgs package set
-              postSyncHookCommand = "${pkgs.jomarm-offlineimap-postsynchook}/bin/jomarm-offlineimap-postsynchook ${config.accounts.email.maildirBasePath}/${
-                config.accounts.email.accounts."jomarm".maildir.path
-              }/INBOX";
-            };
+              F954 C5C9 5AE7 A312 183D  A76C 6AC4 6A6F 9A56 18D8
+            ''}";
           };
+          extraBinds = {
+            view.ga = ":pipe -mb ${config.programs.git.package} am -3<Enter>";
+          };
+        };
+
+        offlineimap = {
+          enable = true;
+          # Assumption: jomarm-offlineimap-postsynchook available in nixpkgs package set
+          postSyncHookCommand = "${pkgs.jomarm-offlineimap-postsynchook}/bin/jomarm-offlineimap-postsynchook ${config.accounts.email.maildirBasePath}/${
+            config.accounts.email.accounts."jomarm".maildir.path
+          }/INBOX";
         };
       };
     };
