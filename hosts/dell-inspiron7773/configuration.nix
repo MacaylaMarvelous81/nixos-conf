@@ -58,10 +58,10 @@ in
         nixpkgs.config.allowUnfreePredicate =
           pkg:
           builtins.elem (lib.getName pkg) [
-            (lib.getName pkgs.aseprite)
-            (lib.getName pkgs.jetbrains.idea)
-            (lib.getName pkgs.jetbrains.rider)
-            (lib.getName pkgs.unrar)
+            "aseprite"
+            "idea"
+            "rider"
+            "unrar"
           ];
 
         home.stateVersion = "24.11";
@@ -150,10 +150,9 @@ in
       builtins.elem (lib.getName pkg) [
         "nvidia-settings"
         "nvidia-kernel-modules"
-        (lib.getName pkgs.steam-unwrapped)
-
-        (lib.getName config.hardware.nvidia.package)
-        (lib.getName config.programs.steam.package)
+        "nvidia-x11"
+        "steam"
+        "steam-unwrapped"
       ];
 
     system.stateVersion = "25.11";
