@@ -329,7 +329,60 @@ in
 
         "inode/directory" = [ "pcmanfm-qt.desktop" ];
         "inode/mount-point" = [ "pcmanfm-qt.desktop" ];
-      };
+      }
+      // builtins.listToAttrs (
+        map
+          (type: {
+            name = type;
+            value = [ "org.kde.ark.desktop" ];
+          })
+          [
+            "application/gzip"
+            "application/x-bzip"
+            "application/x-bzip2"
+            "application/x-lzma"
+            "application/x-xz"
+            "application/zstd"
+            "application/x-lz4"
+            "application/x-lzip"
+            "application/x-lrzip"
+            "application/x-xar"
+            "application/x-tar"
+            "application/x-compressed-tar"
+            "application/x-bzip-compressed-tar"
+            "application/x-bzip2-compressed-tar"
+            "application/x-tarz"
+            "application/x-xz-compressed-tar"
+            "application/x-lzma-compressed-tar"
+            "application/x-lz4-compressed-tar"
+            "application/x-zstd-compressed-tar"
+            "application/x-7z-compressed"
+            "application/vnd.rar"
+            "application/zip"
+            "application/gzip"
+            "application/x-bzip"
+            "application/x-bzip2"
+            "application/x-lzma"
+            "application/x-xz"
+            "application/zstd"
+            "application/x-lz4"
+            "application/x-lzip"
+            "application/x-lrzip"
+            "application/x-xar"
+            "application/x-tar"
+            "application/x-compressed-tar"
+            "application/x-bzip-compressed-tar"
+            "application/x-bzip2-compressed-tar"
+            "application/x-tarz"
+            "application/x-xz-compressed-tar"
+            "application/x-lzma-compressed-tar"
+            "application/x-lz4-compressed-tar"
+            "application/x-zstd-compressed-tar"
+            "application/x-7z-compressed"
+            "application/vnd.rar"
+            "application/zip"
+          ]
+      );
 
       defaultApplicationPackages = [ config.programs.feh.package ];
     };
