@@ -67,6 +67,10 @@ in
         home.stateVersion = "24.11";
       };
 
+    environment.etc = {
+      "nixos/nixpkgs".source = builtins.storePath pkgs.path;
+    };
+
     hardware.graphics.enable = true;
     services.xserver.videoDrivers = [
       "modesetting"
@@ -87,6 +91,7 @@ in
     };
 
     nix.channel.enable = false;
+    nix.nixPath = [ "nixpkgs=/etc/nixos/nixpkgs" ];
 
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
