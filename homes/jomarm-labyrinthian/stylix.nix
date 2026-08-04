@@ -24,6 +24,7 @@ in
         ];
 
         fonts.fontconfig.enable = true;
+        home.pointerCursor.enable = true;
       }
       (lib.optionalAttrs (builtins.hasAttr "stylix" options) {
         stylix = {
