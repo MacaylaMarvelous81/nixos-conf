@@ -1,4 +1,9 @@
-{ pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 let
   sources = import ./tamal { };
 in
@@ -143,8 +148,12 @@ in
     nixpkgs.config.allowUnfreePredicate =
       pkg:
       builtins.elem (lib.getName pkg) [
-        (lib.getName pkgs.steam)
+        "nvidia-settings"
+        "nvidia-kernel-modules"
         (lib.getName pkgs.steam-unwrapped)
+
+        (lib.getName config.hardware.nvidia.package)
+        (lib.getName config.programs.steam.package)
       ];
 
     system.stateVersion = "25.11";
