@@ -21,57 +21,21 @@ inputs {
 			| cut -f1
 		}
 	}
-	flake-compat {
-		archive {
-			url "https://github.com/NixOS/flake-compat/archive/{{fresh_value}}.tar.gz"
-		}
-		fresh-cmd {
-			$ git ls-remote "https://github.com/NixOS/flake-compat.git" --refs "refs/heads/master"
-			| cut -f1
-		}
-	}
-	sops-nix {
-		archive {
-			url "https://github.com/Mic92/sops-nix/archive/{{fresh_value}}.tar.gz"
-		}
-		fresh-cmd {
-			$ git ls-remote "https://github.com/Mic92/sops-nix.git" --refs "refs/heads/master"
-			| cut -f1
-		}
-	}
-	erosanix {
-		archive {
-			url "https://github.com/emmanuelrosa/erosanix/archive/{{fresh_value}}.tar.gz"
-		}
-		fresh-cmd {
-			$ git ls-remote "https://github.com/emmanuelrosa/erosanix.git" --refs "refs/heads/master"
-			| cut -f1
-		}
-	}
-	niri-flake {
-		archive {
-			url "https://github.com/sodiboo/niri-flake/archive/{{fresh_value}}.tar.gz"
-		}
-		fresh-cmd {
-			$ git ls-remote "https://github.com/sodiboo/niri-flake.git" --refs "refs/heads/main"
-			| cut -f1
-		}
-	}
+	// erosanix {
+	// 	archive {
+	// 		url "https://github.com/emmanuelrosa/erosanix/archive/{{fresh_value}}.tar.gz"
+	// 	}
+	// 	fresh-cmd {
+	// 		$ git ls-remote "https://github.com/emmanuelrosa/erosanix.git" --refs "refs/heads/master"
+	// 		| cut -f1
+	// 	}
+	// }
 	stylix {
 		archive {
 			url "https://github.com/nix-community/stylix/archive/{{fresh_value}}.tar.gz"
 		}
 		fresh-cmd {
 			$ git ls-remote "https://github.com/nix-community/stylix.git" --refs "refs/heads/master"
-			| cut -f1
-		}
-	}
-	wrappers {
-		archive {
-			url "https://github.com/BirdeeHub/nix-wrapper-modules/archive/{{fresh_value}}.tar.gz"
-		}
-		fresh-cmd {
-			$ git ls-remote "https://github.com/BirdeeHub/nix-wrapper-modules.git" --refs "refs/heads/main"
 			| cut -f1
 		}
 	}
