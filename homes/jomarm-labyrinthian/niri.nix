@@ -47,6 +47,23 @@ in
           "Mod+D".toggle-window-floating = { };
           "Mod+Shift+D".switch-focus-between-floating-and-tiling = { };
 
+          "Mod+S".spawn = [
+            "${pkgs.niri-sidebar}/bin/niri-sidebar"
+            "toggle-window"
+          ];
+          "Mod+Shift+S".spawn = [
+            "${pkgs.niri-sidebar}/bin/niri-sidebar"
+            "toggle-visibility"
+          ];
+          "Mod+Ctrl+S".spawn = [
+            "${pkgs.niri-sidebar}/bin/niri-sidebar"
+            "flip"
+          ];
+          "Mod+Alt+S".spawn = [
+            "${pkgs.niri-sidebar}/bin/niri-sidebar"
+            "reorder"
+          ];
+
           "Mod+C".toggle-column-tabbed-display = { };
 
           "Mod+Home".focus-column-first = { };
