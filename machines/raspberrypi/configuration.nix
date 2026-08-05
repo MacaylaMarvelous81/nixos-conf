@@ -21,6 +21,8 @@
   users.groups."${config.services.matrix-continuwuity.group}".members = [
     config.services.nginx.user
   ];
+  # dynamicuser group pairs
+  # systemd.services.nginx.serviceConfig.SupplementaryGroups = [ "miniflux" ];
 
   services.openssh = {
     enable = true;
@@ -55,6 +57,17 @@
       };
     };
   };
+
+  # services.miniflux = {
+  #   enable = true;
+  #   config = {
+  #     BASE_URL = "http://miniflux.raspberrypi.lan";
+  #     # The NixOS module enables this by default even though the miniflux
+  #     # default is disabled.
+  #     CREATE_ADMIN = false;
+  #     LISTEN_ADDR = "/run/miniflux/miniflux.sock";
+  #   };
+  # };
 
   services.nginx = {
     enable = true;
@@ -115,6 +128,12 @@
         client_max_body_size 20M;
       '';
     };
+    # virtualHosts."miniflux.raspberrypi.lan" = {
+    #   locations."/" = {
+    #     proxyPass = "http://unix:/run/miniflux/miniflux.sock:$request_uri";
+    #     recommendedProxySettings = true;
+    #   };
+    # };
   };
 
   services.prosody = {
