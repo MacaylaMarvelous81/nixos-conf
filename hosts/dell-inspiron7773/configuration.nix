@@ -70,6 +70,90 @@ in
         accounts.email.accounts."jomarm".passwordCommand =
           "cat ${config.home.homeDirectory}/.secrets/jomarm@pyrodax.com";
 
+        home.packages = [
+          (pkgs.buildFHSEnv {
+            name = "stellaris-gog-unpacked-env";
+            includeClosures = true;
+            targetPkgs =
+              pkgs: with pkgs; [
+                bash
+                coreutils
+                file
+                lsb-release
+                pciutils
+                glibc_multi.bin
+                usbutils
+                xdg-utils
+                xz
+                zenity
+              ];
+            # not sure exactly which of these are needed and which of these are not, but some
+            # are definitely needed
+            multiPkgs =
+              pkgs: with pkgs; [
+                glibc
+                libxcrypt
+                libGL
+                libdrm
+                libgbm
+                udev
+                libudev0-shim
+                libva
+                vulkan-loader
+                networkmanager
+                libcap
+                nss
+                nspr
+
+                libxxf86vm
+                libGLU
+                wayland
+                libx11
+                libxext
+                libxcursor
+                libxi
+                libxinerama
+                libxrandr
+                libxrender
+                libxtst
+                libpng
+                libxscrnsaver
+                libxkbcommon
+                libbsd
+                SDL2
+                gtk2
+                pango
+                gdk-pixbuf
+                cairo
+                sndio
+                alsa-lib
+                libpulseaudio
+                openal
+                zlib
+                openssl
+                dbus
+                gcc-unwrapped.lib
+              ];
+            extraInstallCommands = ''
+              mkdir -p $out/share/applications
+              cat > $out/share/applications/gog_com-Stellaris_1.desktop <<EOF
+              [Desktop Entry]
+              Encoding=UTF-8
+              Value=1.0
+              Type=Application
+              Name=Stellaris
+              GenericName=Stellaris
+              Comment=Stellaris
+              Icon=${config.home.homeDirectory}/GOG Games/Stellaris/support/icon.png
+              Exec="$out/bin/stellaris-gog-unpacked-env" ""
+              Categories=Game;
+              Path=${config.home.homeDirectory}/GOG Games/Stellaris
+              EOF
+            '';
+            runScript = "\"${config.home.homeDirectory}\"/GOG\\ Games/Stellaris/start.sh";
+          })
+        ];
+
         nixpkgs.overlays = [
           (final: prev: import ../../pkgs { pkgs = prev; })
         ];
