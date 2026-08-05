@@ -111,6 +111,7 @@ in
 
     nix.channel.enable = false;
     nix.nixPath = [ "nixpkgs=/etc/nixos/nixpkgs" ];
+    nix.settings.trusted-users = [ "@wheel" ];
 
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
