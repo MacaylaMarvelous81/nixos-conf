@@ -56,9 +56,21 @@ in
         # passwordCommand = "cat ${config.home.homeDirectory}/.secrets/jomarm@pyrodax.com";
         primary = true;
         realName = "Jomar Milan";
+        signature = {
+          showSignature = "append";
+          text = ''
+            Jomar Milan
+
+            If possible, please sign and encrypt your emails with OpenPGP. My key is
+            accessible via the WKD protocol, or at https://pyrodax.com/key.gpg with the
+            following fingerprint:
+
+            F954 C5C9 5AE7 A312 183D  A76C 6AC4 6A6F 9A56 18D8
+          '';
+        };
 
         aerc = {
-          enable = true;
+          enable = false;
           extraAccounts = {
             pgp-opportunistic-encrypt = true;
             pgp-auto-sign = true;
@@ -78,11 +90,15 @@ in
         };
 
         offlineimap = {
-          enable = true;
+          enable = false;
           # Assumption: jomarm-offlineimap-postsynchook available in nixpkgs package set
           postSyncHookCommand = "${pkgs.jomarm-offlineimap-postsynchook}/bin/jomarm-offlineimap-postsynchook ${config.accounts.email.maildirBasePath}/${
             config.accounts.email.accounts."jomarm".maildir.path
           }/INBOX";
+        };
+
+        thunderbird = {
+          enable = true;
         };
       };
     };
@@ -118,7 +134,7 @@ in
     ];
 
     programs.aerc = {
-      enable = true;
+      enable = false;
       extraConfig = {
         general = {
           # Necessary due to a documented home-manager limitation. Safe because password command option is used instead
@@ -183,6 +199,15 @@ in
       settings."*" = {
         UserKnownHostsFile = "~/.ssh/known_hosts";
         ControlPath = "~/.ssh/master-%r@%n:%p";
+      };
+    };
+    programs.thunderbird = {
+      enable = true;
+      profiles = {
+        default = {
+          isDefault = true;
+          withExternalGnupg = true;
+        };
       };
     };
     programs.waybar = {
@@ -276,16 +301,16 @@ in
     };
     services.udiskie.enable = true;
 
-    systemd.user.services.offlineimap = {
-      Unit = {
-        Description = "Offlineimap: a software to dispose your mailbox(es) as a local Maildir(s)";
-      };
-      Service = {
-        Type = "oneshot";
-        ExecStart = "${config.programs.offlineimap.package}/bin/offlineimap -u syslog -o -1";
-        TimeoutStartSec = "120sec";
-      };
-    };
+    # systemd.user.services.offlineimap = {
+    #   Unit = {
+    #     Description = "Offlineimap: a software to dispose your mailbox(es) as a local Maildir(s)";
+    #   };
+    #   Service = {
+    #     Type = "oneshot";
+    #     ExecStart = "${config.programs.offlineimap.package}/bin/offlineimap -u syslog -o -1";
+    #     TimeoutStartSec = "120sec";
+    #   };
+    # };
     systemd.user.services.wallpaper = {
       Unit = {
         Description = "Wallpaper rendered with linux-wallpaperengine";
@@ -302,19 +327,19 @@ in
         WantedBy = [ "graphical-session.target" ];
       };
     };
-    systemd.user.timers.offlineimap = {
-      Unit = {
-        Description = "offlineimap timer";
-      };
-      Timer = {
-        Unit = "offlineimap.service";
-        OnCalendar = "*:0/3";
-        Persistent = "true";
-      };
-      Install = {
-        WantedBy = [ "default.target" ];
-      };
-    };
+    # systemd.user.timers.offlineimap = {
+    #   Unit = {
+    #     Description = "offlineimap timer";
+    #   };
+    #   Timer = {
+    #     Unit = "offlineimap.service";
+    #     OnCalendar = "*:0/3";
+    #     Persistent = "true";
+    #   };
+    #   Install = {
+    #     WantedBy = [ "default.target" ];
+    #   };
+    # };
 
     xdg.mimeApps = {
       enable = true;
