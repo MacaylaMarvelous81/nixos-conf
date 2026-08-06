@@ -166,6 +166,7 @@ in
       };
       settings = {
         init.defaultBranch = "master";
+        merge.conflictStyle = "diff3";
         user = {
           name = "Jomar Milan";
           email = "jomarm@pyrodax.com";
