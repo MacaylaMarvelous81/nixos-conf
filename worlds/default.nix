@@ -1,3 +1,6 @@
 {
-  imports = [ ./labyrinthia ];
+  imports = [
+    ./arsekar
+    ./labyrinthia
+  ];
 }
