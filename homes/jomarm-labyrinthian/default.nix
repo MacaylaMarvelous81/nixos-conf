@@ -165,7 +165,7 @@ in
         signByDefault = true;
       };
       settings = {
-        init.defaultBranch = "master";
+        init.defaultBranch = "main";
         merge.conflictStyle = "diff3";
         user = {
           name = "Jomar Milan";
