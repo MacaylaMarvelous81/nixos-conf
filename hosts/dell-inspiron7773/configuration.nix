@@ -171,7 +171,12 @@ in
       };
 
     environment.etc = {
-      "nixos/nixpkgs".source = builtins.storePath pkgs.path;
+      # If this nixpkgs is already in the nix store, this will unfortunately create
+      # another copy of it in the nix store. builtins.storePath can avoid this, but
+      # builtins.storePath also makes the build non-reproducible if pkgs.path is not
+      # in the store. This is possible, for example, when working with a Nix store
+      # on another filesystem.
+      "nixos/nixpkgs".source = pkgs.path;
     };
 
     hardware.graphics.enable = true;
