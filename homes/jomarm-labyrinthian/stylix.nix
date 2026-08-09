@@ -53,8 +53,8 @@ in
 
           fonts = {
             sansSerif = {
-              package = pkgs.sf-pro;
-              name = "SF Pro";
+              package = pkgs.atkinson-hyperlegible;
+              name = "Atkinson Hyperlegible";
             };
             monospace = {
               package = pkgs.nerd-fonts._0xproto;
