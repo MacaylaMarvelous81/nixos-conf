@@ -1,0 +1,51 @@
+// ┏┓╻+╻ ╱┏┳┓┏┓┏┳┓┏┓╻
+// ┃┃┃┃┗━┓╹┃╹┣┫┃┃┃┣┫┃   Read the manpage:
+// ╹┗┛╹╱ ╹ ╹ ╹╹╹ ╹╹╹┗┛  $ man nixtamal-manifest
+version "1.2.0"
+inputs {
+	nixpkgs {
+		archive {
+			url "{{fresh_value}}/nixexprs.tar.xz"
+		}
+		hash algorithm=SHA-256
+		fresh-cmd {
+			$ curl -Ls --http2 --compressed -o "/dev/null" -w "%{url_effective}" "https://channels.nixos.org/nixos-unstable"
+		}
+	}
+	home-manager {
+		archive {
+			url "https://github.com/nix-community/home-manager/archive/{{fresh_value}}.tar.gz"
+		}
+		fresh-cmd {
+			$ git ls-remote "https://github.com/nix-community/home-manager.git" --refs "refs/heads/master"
+			| cut -f1
+		}
+	}
+	// erosanix {
+	// 	archive {
+	// 		url "https://github.com/emmanuelrosa/erosanix/archive/{{fresh_value}}.tar.gz"
+	// 	}
+	// 	fresh-cmd {
+	// 		$ git ls-remote "https://github.com/emmanuelrosa/erosanix.git" --refs "refs/heads/master"
+	// 		| cut -f1
+	// 	}
+	// }
+	stylix {
+		archive {
+			url "https://github.com/nix-community/stylix/archive/{{fresh_value}}.tar.gz"
+		}
+		fresh-cmd {
+			$ git ls-remote "https://github.com/nix-community/stylix.git" --refs "refs/heads/master"
+			| cut -f1
+		}
+	}
+	lazyvim-nix {
+		archive {
+			url "https://github.com/pfassina/lazyvim-nix/archive/{{fresh_value}}.tar.gz"
+		}
+		fresh-cmd {
+			$ git ls-remote "https://github.com/pfassina/lazyvim-nix.git" --refs "refs/heads/main"
+			| cut -f1
+		}
+	}
+}

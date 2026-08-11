@@ -1,0 +1,195 @@
+/*
+Default QSS for hydrus. This is prepended to any stylesheet loaded in hydrus.
+Copying these entries in your own stylesheets should override these settings.
+*/
+
+/*
+
+Here are some text and background colours
+
+*/
+
+/* Example: This regex is valid */
+
+QLabel#HydrusValid
+{
+    color: #{{base04-hex}};
+}
+
+QLineEdit#HydrusValid, QTextEdit#HydrusValid, QPlainTextEdit#HydrusValid
+{
+    color: #{{base05-hex}};
+    background-color: #{{base01-hex}};
+}
+
+
+/* Duplicates 'middle' text colour */
+
+QLabel#HydrusIndeterminate
+{
+    color: #{{base04-hex}};
+}
+
+QLineEdit#HydrusIndeterminate, QTextEdit#HydrusIndeterminate, QPlainTextEdit#HydrusIndeterminate
+{
+    color: #{{base05-hex}};
+    background-color: #{{base01-hex}};
+}
+
+
+/* Example: This regex is invalid */
+
+QLabel#HydrusInvalid
+{
+    color: #{{base08-hex}};
+}
+
+QLineEdit#HydrusInvalid, QTextEdit#HydrusInvalid, QPlainTextEdit#HydrusInvalid
+{
+    color: #{{base05-hex}};
+    background-color: #{{base02-hex}};
+}
+
+
+/* Example: Your files are going to be deleted! */
+
+QLabel#HydrusWarning, QCheckBox#HydrusWarning
+{
+    color: #{{base0A-hex}};
+}
+
+/*
+
+Buttons on dialogs
+
+*/
+
+QPushButton#HydrusAccept
+{
+    color: #{{base04-hex}};
+}
+
+QPushButton#HydrusCancel
+{
+    color: #{{base08-hex}};
+}
+
+/*
+
+This is the green/red button that switches 'include current tags' and similar states on/off
+
+*/
+
+QPushButton#HydrusOnOffButton[hydrus_on=true]
+{
+    color: #{{base04-hex}};
+}
+
+QPushButton#HydrusOnOffButton[hydrus_on=false]
+{
+    color: #{{base08-hex}};
+}
+
+/*
+
+This is the Command Palette (default Ctrl+P), and specifically the background colour of the item you currently have selected.
+
+*/
+
+QLocatorResultWidget#selectedLocatorResult
+{
+    background-color: palette(highlight);
+}
+
+QLocatorResultWidget QWidget
+{
+    background: transparent;
+}
+
+
+/*
+
+Custom Controls
+
+These are drawn by hydev on a blank canvas, so they work a little different.
+
+*/
+
+/*
+
+The main colours in the _options->colours_ panel. This used to be hardcoded, with no way to change it in QSS, but now the QSS is the default and the options panel has the choice of overriding what the current stylesheet suggests.
+
+*/
+
+
+/* The main thumbnail grid. */
+
+QWidget#HydrusMediaList
+{
+    qproperty-hmrp_background: #{{base00-hex}};
+    qproperty-hmrp_thumbnail_local_background_normal: #{{base00-hex}};
+    qproperty-hmrp_thumbnail_local_border_normal: #{{base03-hex}};
+    qproperty-hmrp_thumbnail_local_background_selected: #{{base01-hex}};
+    qproperty-hmrp_thumbnail_local_border_selected: #{{base0D-hex}};
+    qproperty-hmrp_thumbnail_not_local_background_normal: #202024;
+    qproperty-hmrp_thumbnail_not_local_border_normal: #f8d0cc;
+    qproperty-hmrp_thumbnail_not_local_background_selected: #404048;
+    qproperty-hmrp_thumbnail_not_local_border_selected: #e34234;
+}
+
+
+/* The media viewer. */
+
+QWidget#HydrusMediaViewer
+{
+    qproperty-hmv_background: #{{base00-hex}};
+    qproperty-hmv_text: #{{base05-hex}};
+}
+
+
+/* The tag autocomplete text input. */
+
+QWidget#HydrusTagAutocomplete
+{
+    qproperty-hta_background: #{{base01-hex}};
+}
+
+
+/* Tag lists across the program. */
+
+QWidget#HydrusTagList
+{
+    qproperty-htl_background: #{{base00-hex}};
+}
+
+
+/*
+
+Other custom stuff
+
+*/
+
+/* The scanbar beneath video/audio in the media viewer. */
+
+QWidget#HydrusAnimationBar
+{
+    qproperty-hab_border: #{{base0D-hex}};
+    qproperty-hab_background: #{{base01-hex}};
+    qproperty-hab_nub: #606060;
+}
+
+
+/*
+
+Clickable Links
+
+This one is odd since we are assigning a colour to <a> html richtext inside a QLabel.
+We hack it with hardcoded 'style' attribute in the html in python code.
+
+*/
+
+
+QLabel#HydrusHyperlink
+{
+    qproperty-link_color: palette(link);
+}
