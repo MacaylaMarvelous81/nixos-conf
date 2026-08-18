@@ -1,9 +1,9 @@
 {"v":"1.2.0"
 ,"i":{
-"nixpkgs":{"sn":"nixpkgs-src","kd":[1,{"ft":0,"ur":"https://releases.nixos.org/nixos/unstable/nixos-26.11pre1049422.f13ff45afd1b/nixexprs.tar.xz","ms":[]}],"ha":{"al":0,"vl":"sha256-CgKDSHL6rqAAQkkvg1xaZDQXb77+4XW73iGcUMJ+2w0="},"fv":"https://releases.nixos.org/nixos/unstable/nixos-26.11pre1049422.f13ff45afd1b","ps":[]}
-,"home-manager":{"sn":"home-manager-src","kd":[1,{"ft":0,"ur":"https://github.com/nix-community/home-manager/archive/367f7ef80856d18438953d54dda235d42a46ba31.tar.gz","ms":[]}],"ha":{"al":0,"vl":"sha256-7dN93WKkEERgutPtTjK7SY3ZarO2LAU33A1+vKu+7cc="},"fv":"367f7ef80856d18438953d54dda235d42a46ba31","ps":[]}
+"nixpkgs":{"sn":"nixpkgs-src","kd":[1,{"ft":0,"ur":"https://releases.nixos.org/nixos/unstable/nixos-26.11pre1055335.e5bdc4a41d4c/nixexprs.tar.xz","ms":[]}],"ha":{"al":0,"vl":"sha256-kSR/jfpR4cE26YRZ8exQkoRbEA30vyWimajwZANYYaE="},"fv":"https://releases.nixos.org/nixos/unstable/nixos-26.11pre1055335.e5bdc4a41d4c","ps":[]}
+,"home-manager":{"sn":"home-manager-src","kd":[1,{"ft":0,"ur":"https://github.com/nix-community/home-manager/archive/353742587cbaf079b3caee743115d037bc51fea6.tar.gz","ms":[]}],"ha":{"al":0,"vl":"sha256-MTGMFlLDTklsXhCp4r5GXB4VAVadPdalXLvUjd/K7h0="},"fv":"353742587cbaf079b3caee743115d037bc51fea6","ps":[]}
 ,"lazyvim-nix":{"sn":"lazyvim-nix-src","kd":[1,{"ft":0,"ur":"https://github.com/pfassina/lazyvim-nix/archive/d1f9bd2bfff35708dfaf75351bce06580a862f61.tar.gz","ms":[]}],"ha":{"al":0,"vl":"sha256-ezB1SLk4wyBkJZC9NHKn21FsheyVdmFha+FO/6tflO4="},"fv":"d1f9bd2bfff35708dfaf75351bce06580a862f61","ps":[]}
-,"stylix":{"sn":"stylix-src","kd":[1,{"ft":0,"ur":"https://github.com/nix-community/stylix/archive/b67debfd2db1eb1f0fd8740b950f598bbaf74b8f.tar.gz","ms":[]}],"ha":{"al":0,"vl":"sha256-fOOmw9tUYeqWVnK2w2NiuMTmGIbluj8xiBFTTFDCcEE="},"fv":"b67debfd2db1eb1f0fd8740b950f598bbaf74b8f","ps":[]}
+,"stylix":{"sn":"stylix-src","kd":[1,{"ft":0,"ur":"https://github.com/nix-community/stylix/archive/1e6ccadeda179d96728b4a9f20fc9d4dcf6b6059.tar.gz","ms":[]}],"ha":{"al":0,"vl":"sha256-F93yabBSW2TpxKYMcArQOnFuCqBgAdbfZsdl0w5Pojg="},"fv":"1e6ccadeda179d96728b4a9f20fc9d4dcf6b6059","ps":[]}
 }
 ,"p":{}
 }
