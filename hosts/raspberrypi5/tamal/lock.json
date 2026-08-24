@@ -1,0 +1,8 @@
+{"v":"1.2.0"
+,"i":{
+"nixpkgs":{"sn":"nixpkgs-src","kd":[1,{"ft":0,"ur":"https://releases.nixos.org/nixos/26.05/nixos-26.05.8255.a9e6d84f9c2f/nixexprs.tar.xz","ms":[]}],"ha":{"al":0,"vl":"sha256-8FnH9CMQCQ9i7d7xrXK30SBjgODxlkltCa0thsRgrxg="},"fv":"https://releases.nixos.org/nixos/26.05/nixos-26.05.8255.a9e6d84f9c2f","ps":["sd-image-aarch64-rpi"]}
+}
+,"p":{
+"sd-image-aarch64-rpi":{"ur":"https://github.com/NixOS/nixpkgs/pull/537862.diff","ha":{"al":0,"vl":"sha256-Nr8B0R6tyMjvbhR8mA3WPkVVVKRjpfX0lrUr8TvH4Fk="}}
+}
+}

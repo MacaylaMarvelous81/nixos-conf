@@ -1,9 +1,7 @@
-{ pkgs, nixos-raspberrypi, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ../../worlds
-
-    nixos-raspberrypi.nixosModules.raspberry-pi-5.base
   ];
 
   config = {
@@ -21,32 +19,11 @@
       ];
     };
 
+    boot.kernelParams = [ "console=ttyAMA10,115200n8" ];
+
     nixpkgs.hostPlatform = "aarch64-linux";
 
-    boot.loader.raspberry-pi.bootloader = "kernel";
-
     nix.settings.trusted-users = [ "@wheel" ];
-
-    fileSystems = {
-      "/" = {
-        device = "/dev/disk/by-label/NIXOS_SD";
-        fsType = "ext4";
-        options = [
-          "x-initrd.mount"
-          "noatime"
-        ];
-      };
-      "/boot/firmware" = {
-        device = "/dev/disk/by-label/FIRMWARE";
-        fsType = "vfat";
-        options = [
-          "noatime"
-          "noauto"
-          "x-systemd.automount"
-          "x-systemd.idle-timeout=1min"
-        ];
-      };
-    };
 
     system.activationScripts = {
       expire-passwords = {
@@ -64,6 +41,6 @@
         '';
       };
     };
-    system.stateVersion = "25.11";
+    system.stateVersion = "26.05";
   };
 }

@@ -1,0 +1,19 @@
+// ┏┓╻+╻ ╱┏┳┓┏┓┏┳┓┏┓╻
+// ┃┃┃┃┗━┓╹┃╹┣┫┃┃┃┣┫┃   Read the manpage:
+// ╹┗┛╹╱ ╹ ╹ ╹╹╹ ╹╹╹┗┛  $ man nixtamal-manifest
+version "1.2.0"
+patches {
+	sd-image-aarch64-rpi "https://github.com/NixOS/nixpkgs/pull/537862.diff"
+}
+inputs {
+	nixpkgs {
+		archive {
+			url "{{fresh_value}}/nixexprs.tar.xz"
+		}
+		hash algorithm=SHA-256
+		patches "sd-image-aarch64-rpi"
+		fresh-cmd {
+			$ curl -Ls --http2 --compressed -o "/dev/null" -w "%{url_effective}" "https://channels.nixos.org/nixos-26.05"
+		}
+	}
+}
