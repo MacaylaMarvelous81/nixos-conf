@@ -1,9 +1,9 @@
 {"v":"1.2.0"
 ,"i":{
-"nixpkgs":{"sn":"nixpkgs-src","kd":[1,{"ft":0,"ur":"https://releases.nixos.org/nixos/unstable/nixos-26.11pre1059570.2c423e03bbaf/nixexprs.tar.xz","ms":[]}],"ha":{"al":0,"vl":"sha256-95aJfHyQTLWslCXFVNB0odgmVkpdmDezQwTg9mhqV1E="},"fv":"https://releases.nixos.org/nixos/unstable/nixos-26.11pre1059570.2c423e03bbaf","ps":[]}
-,"home-manager":{"sn":"home-manager-src","kd":[1,{"ft":0,"ur":"https://github.com/nix-community/home-manager/archive/cfba7ad5886b342b8dd63ba74354b3853ea4cfc9.tar.gz","ms":[]}],"ha":{"al":0,"vl":"sha256-zIdM+8teujHm5hc5MIPDnV7k2UeOOT/pFyFtWjOCwsY="},"fv":"cfba7ad5886b342b8dd63ba74354b3853ea4cfc9","ps":[]}
-,"lazyvim-nix":{"sn":"lazyvim-nix-src","kd":[1,{"ft":0,"ur":"https://github.com/pfassina/lazyvim-nix/archive/d1f9bd2bfff35708dfaf75351bce06580a862f61.tar.gz","ms":[]}],"ha":{"al":0,"vl":"sha256-ezB1SLk4wyBkJZC9NHKn21FsheyVdmFha+FO/6tflO4="},"fv":"d1f9bd2bfff35708dfaf75351bce06580a862f61","ps":[]}
-,"stylix":{"sn":"stylix-src","kd":[1,{"ft":0,"ur":"https://github.com/nix-community/stylix/archive/a9e5a76a1b75b137f266e4f445e1eaba82e9783e.tar.gz","ms":[]}],"ha":{"al":0,"vl":"sha256-tzNjlb0loxeWlipvxSNAUUihloeTZoyGFhEen87yM9k="},"fv":"a9e5a76a1b75b137f266e4f445e1eaba82e9783e","ps":[]}
+"nixpkgs":{"sn":"nixpkgs-src","kd":[1,{"ft":0,"ur":"https://releases.nixos.org/nixos/unstable/nixos-26.11pre1072397.eaad089433ca/nixexprs.tar.xz","ms":[]}],"ha":{"al":0,"vl":"sha256-eQUZVehWLDBbpBR2rq6DnuRee1ULT6Y675RhsYDSjYI="},"fv":"https://releases.nixos.org/nixos/unstable/nixos-26.11pre1072397.eaad089433ca","ps":[]}
+,"home-manager":{"sn":"home-manager-src","kd":[1,{"ft":0,"ur":"https://github.com/nix-community/home-manager/archive/fe48612c5321a2cc09b0f563757a9c9733d641f8.tar.gz","ms":[]}],"ha":{"al":0,"vl":"sha256-6hZ6Gy8isRQsWdI4l81Egag/PUIh68nSmFr2maInUNg="},"fv":"fe48612c5321a2cc09b0f563757a9c9733d641f8","ps":[]}
+,"lazyvim-nix":{"sn":"lazyvim-nix-src","kd":[1,{"ft":0,"ur":"https://github.com/pfassina/lazyvim-nix/archive/21893371738a6734c2a8ca455d92d57cc8accf83.tar.gz","ms":[]}],"ha":{"al":0,"vl":"sha256-XGWQ4CtmuRH+4NijKC5OlMMd32Au7plsIaiaCWuM4to="},"fv":"21893371738a6734c2a8ca455d92d57cc8accf83","ps":[]}
+,"stylix":{"sn":"stylix-src","kd":[1,{"ft":0,"ur":"https://github.com/nix-community/stylix/archive/5e3809851f486e7fc7e84b40f174c74b60ecc784.tar.gz","ms":[]}],"ha":{"al":0,"vl":"sha256-DkkJSBOXWV/mja5Vy8az5g1KpZlsbUwlmH0BsQhowaQ="},"fv":"5e3809851f486e7fc7e84b40f174c74b60ecc784","ps":[]}
 }
 ,"p":{}
 }
