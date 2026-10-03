@@ -2,6 +2,8 @@
 {
   imports = [
     ../../worlds
+
+    ./hardware-configuration.nix
   ];
 
   config = {
@@ -21,7 +23,8 @@
 
     boot.kernelParams = [ "console=ttyAMA10,115200n8" ];
 
-    nixpkgs.hostPlatform = "aarch64-linux";
+    boot.loader.grub.enable = false;
+    boot.loader.generic-extlinux-compatible.enable = true;
 
     nix.settings.trusted-users = [ "@wheel" ];
 
