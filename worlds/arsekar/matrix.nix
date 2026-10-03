@@ -1,4 +1,9 @@
-{ config, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 let
   cfg = config.worlds.arsekar.matrix;
 in
@@ -20,6 +25,8 @@ in
   config = lib.mkIf cfg.enable {
     services.matrix-continuwuity = {
       enable = true;
+      # SEC8 was embargoed, so the security fix is not currently backported.
+      package = pkgs.matrix-continuwuity_latest;
       settings = {
         global = {
           server_name = cfg.name;
