@@ -46,6 +46,8 @@ in
                 "custom/vertical-separator"
                 "bluetooth"
                 "custom/slash-separator"
+                "battery"
+                "custom/slash-separator"
                 "network"
                 "custom/slash-separator"
                 "pulseaudio"
@@ -68,6 +70,14 @@ in
                 # nf-md-dots_vertical
                 format = "󰇙";
                 tooltip = false;
+              };
+              battery = {
+                format = "<span style='italic' weight='900' color='${config.homes.jomarm-labyrinthian.statusbar.accentTextColor}'>pow</span> {capacity}%";
+                tooltip-format = "Battery health: {health}%\n{timeTo}";
+                states = {
+                  warning = 50;
+                  critical = 10;
+                };
               };
               bluetooth = {
                 justify = "center";
