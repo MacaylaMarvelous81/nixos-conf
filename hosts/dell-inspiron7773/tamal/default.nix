@@ -25,10 +25,11 @@ OF THIS SOFTWARE.
 	system ? builtins.currentSystem,
 	bootstrap-nixpkgs ? null,
 	bootstrap-nixpkgs-lock-name ? null,
+	bootstrap-pkgs ? null,
 }:
 
 let lock = builtins.fromJSON (builtins.readFile ./lock.json); in
-assert (lock.v == "1.2.0");
+assert (lock.v == "1.3.0");
 let
 	hash-token = {
 		"0" = "sha256";
@@ -88,7 +89,11 @@ let
 		else
 			bootstrap-nixpkgs;
 
-	pkgs = import nixpkgs' {inherit system;};
+	pkgs =
+		if builtins.isAttrs bootstrap-pkgs then
+			bootstrap-pkgs
+		else
+			import nixpkgs' {inherit system;};
 
 	inherit (pkgs) lib;
 
