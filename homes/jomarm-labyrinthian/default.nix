@@ -124,12 +124,10 @@ in
       cinny-desktop
       deadbeef
       dino
-      jetbrains.idea
-      jetbrains.rider
       kdePackages.ark
       kdePackages.okular
       krita
-      (limo.override { withUnrar = true; })
+      limo
       lxqt.pcmanfm-qt
       nixtamal
       seahorse
