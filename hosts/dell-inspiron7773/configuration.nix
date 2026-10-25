@@ -238,6 +238,8 @@ in
       enable = true;
       drivers = with pkgs; [ brlaser ];
     };
+    services.thermald.enable = true;
+    services.tlp.enable = true;
     services.udisks2.enable = true;
 
     hardware.bluetooth.enable = true;
