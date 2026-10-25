@@ -161,9 +161,6 @@ in
           pkg:
           builtins.elem (lib.getName pkg) [
             "aseprite"
-            "idea"
-            "rider"
-            "unrar"
             "vintagestory"
           ];
 
