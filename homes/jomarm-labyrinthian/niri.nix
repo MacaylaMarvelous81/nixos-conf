@@ -242,6 +242,19 @@ in
               }
             ];
           }
+          {
+            window-rule._children = [
+              {
+                match._props = {
+                  app-id = "Chowdren";
+                  title = "The Escapists";
+                };
+              }
+              { open-floating = true; }
+              { default-column-width.fixed = 964; }
+              { default-window-height.fixed = 724; }
+            ];
+          }
         ];
       };
     };
