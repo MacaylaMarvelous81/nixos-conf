@@ -1,8 +1,8 @@
-{"v":"1.3.0"
+{"v":"1.5.0"
 ,"i":{
-"nixpkgs":{"sn":"nixpkgs-src","kd":[1,{"ft":0,"ur":"https://releases.nixos.org/nixos/26.05/nixos-26.05.11045.774debe7a0d1/nixexprs.tar.xz","ms":[]}],"ha":{"al":0,"vl":"sha256-S5MjznoY0gbQbcANPLz5RYjg+5/WQmFRgNbHcP+ydcg="},"fv":"https://releases.nixos.org/nixos/26.05/nixos-26.05.11045.774debe7a0d1","ps":["sd-image-aarch64-rpi"]}
+"nixpkgs":{"sn":"nixpkgs-src","kd":[1,{"ft":0,"ur":"https://releases.nixos.org/nixos/26.05/nixos-26.05.13627.c56a87d8e41c/nixexprs.tar.xz","ms":[],"ex":null}],"ha":{"al":0,"vl":"sha256-4D+5oPvxkOa6tTCWXi4jwRfmWhDXGRSrX4+eOTItLh0="},"fv":"https://releases.nixos.org/nixos/26.05/nixos-26.05.13627.c56a87d8e41c","ps":["sd-image-aarch64-rpi"]}
 }
 ,"p":{
-"sd-image-aarch64-rpi":{"ur":"https://github.com/NixOS/nixpkgs/pull/537862.diff","ha":{"al":0,"vl":"sha256-Nr8B0R6tyMjvbhR8mA3WPkVVVKRjpfX0lrUr8TvH4Fk="}}
+"sd-image-aarch64-rpi":{"ur":"https://github.com/NixOS/nixpkgs/pull/537862.diff","ha":{"al":0,"vl":"sha256-Nr8B0R6tyMjvbhR8mA3WPkVVVKRjpfX0lrUr8TvH4Fk="},"fv":null,"sn":"sd-image-aarch64-rpi-patch"}
 }
 }
