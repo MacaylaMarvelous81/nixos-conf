@@ -53,7 +53,10 @@ in
                 }
               '';
             };
+            lang.dotnet.enable = true;
             lang.rust.enable = true;
+
+            dap.core.enable = true;
           };
           plugins = {
             live-share = ''
@@ -89,6 +92,12 @@ in
             nixd
             nixfmt
             statix
+
+            csharpier
+            netcoredbg
+            fantomas
+            omnisharp-roslyn
+            dotnetCorePackages.dotnet_10.sdk
           ];
         };
       })
